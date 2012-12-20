@@ -1,0 +1,196 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;What's New?</title><link rel="stylesheet" type="text/css" href="stylesheet.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter" title="Chapter&nbsp;1.&nbsp;What's New?"><div class="titlepage"><div><div><h2 class="title"><a name="whats-new"></a>Chapter&nbsp;1.&nbsp;What's New?</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#d1004e4">Neo4j Support</a></span></dt><dt><span class="section"><a href="#d1004e118">Simultaneous engines</a></span></dt><dt><span class="section"><a href="#d1004e184">Support for JSR-330</a></span></dt></dl></div><div class="section" title="Neo4j Support"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d1004e4"></a>Neo4j Support</h2></div></div></div><p>
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			supports
+			<span class="emphasis"><em>Neo4j</em></span>
+			by using next classes:
+		</p><p>
+			</p><table border="1" id="d1004e17"><caption>Table&nbsp;1.1.&nbsp;Lifecycle Management Rules</caption><tr>
+					<td>In Memory</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.InMemoryNeo4j
+						</code>
+					</td>
+				</tr><tr>
+					<td>Embedded</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.EmbeddedNeo4j
+						</code>
+					</td>
+				</tr><tr>
+					<td>Managed Wrapping</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.ManagedWrappingNeoServer
+						</code>
+					</td>
+				</tr><tr>
+					<td>Managed</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.ManagedNeoServer
+						</code>
+					</td>
+				</tr></table><p>
+		</p><p>
+			</p><table border="1" id="d1004e67"><caption>Table&nbsp;1.2.&nbsp;Manager Rule</caption><tr>
+					<td>NoSQLUnit Management</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.Neo4jRule
+						</code>
+					</td>
+				</tr></table><p>
+		</p><p>
+			Default dataset file format in
+			<span class="emphasis"><em>Neo4j</em></span>
+			module is
+			<a class="link" href="http://graphml.graphdrawing.org/" target="_top">GraphML</a>
+			.
+			<span class="emphasis"><em>GraphML</em></span>
+			is a comprehensive and easy-to-use file format for graphs.
+		</p><div class="example"><a name="ex.whats-newneo4j_dataset"></a><p class="title"><b>Example&nbsp;1.1.&nbsp;Example of GraphML Dataset</b></p><div class="example-contents"><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<strong class="hl-tag" style="color: #000096">&lt;graphml</strong> <span class="hl-attribute" style="color: #F5844C">xmlns</span>=<span class="hl-value" style="color: #993300">"http://graphml.graphdrawing.org/xmlns"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;key</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"attr1"</span> <span class="hl-attribute" style="color: #F5844C">for</span>=<span class="hl-value" style="color: #993300">"edge"</span> <span class="hl-attribute" style="color: #F5844C">attr.name</span>=<span class="hl-value" style="color: #993300">"attr1"</span> <span class="hl-attribute" style="color: #F5844C">attr.type</span>=<span class="hl-value" style="color: #993300">"float"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;key</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"attr2"</span> <span class="hl-attribute" style="color: #F5844C">for</span>=<span class="hl-value" style="color: #993300">"node"</span> <span class="hl-attribute" style="color: #F5844C">attr.name</span>=<span class="hl-value" style="color: #993300">"attr2"</span> <span class="hl-attribute" style="color: #F5844C">attr.type</span>=<span class="hl-value" style="color: #993300">"string"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;graph</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"G"</span> <span class="hl-attribute" style="color: #F5844C">edgedefault</span>=<span class="hl-value" style="color: #993300">"directed"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;node</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"1"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"attr2"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>value1<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/node&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;node</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"2"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"attr2"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>value2<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/node&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;edge</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"7"</span> <span class="hl-attribute" style="color: #F5844C">source</span>=<span class="hl-value" style="color: #993300">"1"</span> <span class="hl-attribute" style="color: #F5844C">target</span>=<span class="hl-value" style="color: #993300">"2"</span> <span class="hl-attribute" style="color: #F5844C">label</span>=<span class="hl-value" style="color: #993300">"label1"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"attr1"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>float<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/edge&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;/graph&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/graphml&gt;</strong></pre></div></div><br class="example-break"><p>
+			A simple example of using embedded
+			<span class="emphasis"><em>Neo4j</em></span>
+			lifecycle management could be:
+		</p><div class="example"><a name="program.whats-new-neo_embedded_conf"></a><p class="title"><b>Example&nbsp;1.2.&nbsp;Embedded Neo4j</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.EmbeddedNeo4j.EmbeddedNeo4jRuleBuilder.newEmbeddedNeo4jRule;
+
+<em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> EmbeddedNeo4j embeddedNeo4j = newEmbeddedNeo4jRule().build();</pre></div></div><br class="example-break"><p>
+			And for configuring
+			<span class="emphasis"><em>Neo4j</em></span>
+			connection:
+		</p><div class="example"><a name="program.what-s-new-embedded_connection_neo4j_parameters"></a><p class="title"><b>Example&nbsp;1.3.&nbsp;Neo4j with embedded configuration</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.EmbeddedNeoServerConfigurationBuilder.newEmbeddedNeoServerConfiguration;
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> Neo4jRule neo4jRule = <strong class="hl-keyword">new</strong> Neo4jRule(newEmbeddedNeoServerConfiguration().build());</pre></div></div><br class="example-break"></div><div class="section" title="Simultaneous engines"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d1004e118"></a>Simultaneous engines</h2></div></div></div><p>
+			Sometimes applications will contain more than one
+			<span class="emphasis"><em>NoSQL</em></span>
+			engine,
+			for example some parts of your model will be expressed better
+			as a
+			graph (
+			<span class="application">Neo4J</span>
+			for example), but other parts will be more natural in a
+			column way
+			(for example using
+			<span class="application">Cassandra</span>
+			).
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			supports this
+			kind of scenarios by providing in integration tests a
+			way to not load
+			all datasets into one system, but choosing which
+			datasets are stored
+			in each backend.
+		</p><p>
+			For declaring more than one engine, you must give a name to each
+			database
+			<span class="emphasis"><em>Rule</em></span>
+			using
+			<code class="function">connectionIdentifier()</code>
+			method in configuration instance.
+		</p><div class="example"><a name="what-snew.name-database"></a><p class="title"><b>Example&nbsp;1.4.&nbsp;Given a name database rule</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+                                        .databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"one"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);</pre></div></div><br class="example-break"><p>
+			And also you need to provide an identified dataset for each engine,
+			by using
+			<code class="function">withSelectiveLocations</code>
+			attribute of
+			<code class="function">@UsingDataSet</code>
+			annotation. You must set up the pair "named connection" / datasets.
+		</p><div class="example"><a name="what-snew.dataset-selective"></a><p class="title"><b>Example&nbsp;1.5.&nbsp;Selective dataset example</b></p><div class="example-contents"><pre class="programlisting">@UsingDataSet(withSelectiveLocations =												 
+				{ <em><span class="hl-annotation" style="color: gray">@Selective(identifier = "one", locations = "test3")</span></em> }, 
+			loadStrategy = LoadStrategyEnum.REFRESH)</pre></div></div><br class="example-break"><p>
+			In
+			<a class="link" href="#what-snew.dataset-selective" title="Example&nbsp;1.5.&nbsp;Selective dataset example">example</a>
+			we are refreshing database declared on
+			<a class="link" href="#what-snew.name-database" title="Example&nbsp;1.4.&nbsp;Given a name database rule">previous example</a>
+			with data located at
+			<span class="emphasis"><em>test3</em></span>
+			file.
+		</p><p>
+			Also works in expectations annotation:
+		</p><div class="example"><a name="what-snew.expected-dataset-selective"></a><p class="title"><b>Example&nbsp;1.6.&nbsp;Selective expectation example</b></p><div class="example-contents"><pre class="programlisting">@ShouldMatchDataSet(withSelectiveMatcher = 
+				{ <em><span class="hl-annotation" style="color: gray">@SelectiveMatcher(identifier = "one", location = "test3")</span></em> 
+				})</pre></div></div><br class="example-break"><p>
+			For more information see chapter about
+			<a class="link" href="#">advanced features</a>
+			.
+		</p></div><div class="section" title="Support for JSR-330"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d1004e184"></a>Support for JSR-330</h2></div></div></div><p>
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			supports two annotations of
+			<acronym class="acronym">JSR-330</acronym>
+			aka Dependency Injection for Java. Concretely
+			<code class="classname">@Inject</code>
+			and
+			<code class="classname">@Named</code>
+			annotations.
+		</p><p>
+			During test execution you may need to access underlying class used to
+			load and assert data to execute extra operations to backend.
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			will inspect
+			<code class="classname">@Inject</code>
+			annotations of test fields, and try to set own driver to attribute.
+			For example in case of
+			<span class="application">MongoDb</span>
+			,
+			<code class="classname">com.mongodb.Mongo</code>
+			instance will be injected.
+		</p><div class="example"><a name="what-snew.injection"></a><p class="title"><b>Example&nbsp;1.7.&nbsp;Injection example</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+						.databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+<strong class="hl-keyword">private</strong> Mongo mongo;</pre></div></div><br class="example-break"><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>
+				Note that in
+				<a class="link" href="#what-snew.injection" title="Example&nbsp;1.7.&nbsp;Injection example">example</a>
+				we are setting
+				<code class="varname">this</code>
+				as second parameter to the Rule.
+			</p></div><p>
+			But if you are using more than one engine at same time (see
+			<a class="link" href="#">chapter</a>
+			) you need a way to distinguish each connection. For fixing this
+			problem, you must use
+			<code class="classname">@Named</code>
+			annotation by putting the identifier given in configuration instance.
+			For example:
+		</p><div class="example"><a name="what-snew.named-injection"></a><p class="title"><b>Example&nbsp;1.8.&nbsp;Named injection example</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"one"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule2 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test2"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"two"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Named("one")</span></em>
+<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+<strong class="hl-keyword">private</strong> Mongo mongo1;
+	
+<em><span class="hl-annotation" style="color: gray">@Named("two")</span></em>
+<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+<strong class="hl-keyword">private</strong> Mongo mongo2;</pre></div></div><br class="example-break"><p>
+			For more information see
+			<a class="link" href="#">advanced features</a>
+			chapter.
+		</p></div></div></body></html>

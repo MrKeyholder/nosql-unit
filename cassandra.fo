@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="serif,Symbol,ZapfDingbats" font-size="10pt" text-align="justify" line-height="normal" font-selection-strategy="character-by-character" line-height-shift-adjustment="disregard-shifts" writing-mode="lr-tb" language="en"><fo:layout-master-set><fo:simple-page-master master-name="blank" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body display-align="center" margin-bottom="0.5in" margin-top="0.5in" region-name="blank-body"/><fo:region-before region-name="xsl-region-before-blank" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-blank" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:page-sequence-master master-name="titlepage"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="titlepage-first" page-position="first"/><fo:conditional-page-master-reference master-reference="titlepage-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="titlepage-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="lot"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="lot-first" page-position="first"/><fo:conditional-page-master-reference master-reference="lot-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="lot-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="front"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="front-first" page-position="first"/><fo:conditional-page-master-reference master-reference="front-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="front-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="body"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="body-first" page-position="first"/><fo:conditional-page-master-reference master-reference="body-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="body-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="back"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="back-first" page-position="first"/><fo:conditional-page-master-reference master-reference="back-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="back-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="index"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="index-first" page-position="first"/><fo:conditional-page-master-reference master-reference="index-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="index-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master></fo:layout-master-set><fo:page-sequence xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions" hyphenate="true" master-reference="body" language="en" format="1" initial-page-number="auto" force-page-count="no-force" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2"><fo:static-content flow-name="xsl-region-before-first"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-odd"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>Cassandra Engine</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-even"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>Cassandra Engine</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-blank"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-footnote-separator"><fo:block><fo:leader color="black" leader-pattern="rule" leader-length="1in"/></fo:block></fo:static-content><fo:static-content flow-name="blank-body"><fo:block text-align="center"/></fo:static-content><fo:static-content flow-name="xsl-region-after-first"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-odd"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-even"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-blank"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:flow flow-name="xsl-region-body" start-indent="4pc" end-indent="0pt"><fo:block id="cassandra"><fo:block font-family="sans-serif,Symbol,ZapfDingbats"><fo:block margin-left="0pt"><fo:block font-size="24.8832pt" font-weight="bold"><fo:block keep-with-next.within-column="always" space-before.optimum="10pt" space-before.minimum="10pt * 0.8" space-before.maximum="10pt * 1.2" hyphenate="false" text-align="start" start-indent="0pt" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2">Chapter 1. Cassandra Engine</fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" id="toc...cassandra"><fo:block><fo:block><fo:block space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="0pt" start-indent="0pt" font-size="17.28pt" font-weight="bold" font-family="sans-serif,Symbol,ZapfDingbats">Table of Contents</fo:block></fo:block></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d195e4">Cassandra</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d195e4"><fo:page-number-citation ref-id="d195e4"/></fo:basic-link></fo:inline></fo:block><fo:block id="toc.cassandra.d195e4" margin-left="24pt"><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d195e65">Maven Setup</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d195e65"><fo:page-number-citation ref-id="d195e65"/></fo:basic-link></fo:inline></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d195e81">Dataset Format</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d195e81"><fo:page-number-citation ref-id="d195e81"/></fo:basic-link></fo:inline></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d195e119">Getting Started</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d195e119"><fo:page-number-citation ref-id="d195e119"/></fo:basic-link></fo:inline></fo:block></fo:block></fo:block><fo:block id="d195e4"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Cassandra</fo:marker><fo:block font-size="20.735999999999997pt" border-top="0.5pt solid black" border-bottom="0.5pt solid black" padding-top="6pt" padding-bottom="3pt">Cassandra</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Cassandra
+			is a BigTable data model running on an Amazon Dynamo-like
+			infrastructure.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+			supports
+			<fo:inline font-style="italic">Cassandra</fo:inline>
+			by using next classes:
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d195e22"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.1. Lifecycle Management Rules</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>Embedded</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.cassandra.EmbeddedCassandra
+						</fo:inline>
+					</fo:block></fo:table-cell>
+				</fo:table-row><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>Managed</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.cassandra.ManagedCassandra
+						</fo:inline>
+					</fo:block></fo:table-cell>
+				</fo:table-row></fo:table-body></fo:table></fo:block>
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d195e50"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.2. Manager Rule</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>NoSQLUnit Management</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.cassandra.CassandraRule
+						</fo:inline>
+					</fo:block></fo:table-cell>
+				</fo:table-row></fo:table-body></fo:table></fo:block>
+		</fo:block><fo:block id="d195e65"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Maven Setup</fo:marker><fo:block font-size="17.28pt">Maven Setup</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				To use
+				<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+				with
+				Cassandra
+				you only need to add next
+				dependency:
+			</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="conf.nosqlunit_cassandra_dep"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.1. NoSqlUnit Maven Repository</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e79"><fo:inline font-weight="bold">&lt;dependency&gt;</fo:inline>
+	<fo:inline font-weight="bold">&lt;groupId&gt;</fo:inline>com.lordofthejars<fo:inline font-weight="bold">&lt;/groupId&gt;</fo:inline>
+	<fo:inline font-weight="bold">&lt;artifactId&gt;</fo:inline>nosqlunit-cassandra<fo:inline font-weight="bold">&lt;/artifactId&gt;</fo:inline>
+	<fo:inline font-weight="bold">&lt;version&gt;</fo:inline>${version.nosqlunit}<fo:inline font-weight="bold">&lt;/version&gt;</fo:inline>
+<fo:inline font-weight="bold">&lt;/dependency&gt;</fo:inline></fo:block></fo:block></fo:block></fo:block><fo:block id="d195e81"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Dataset Format</fo:marker><fo:block font-size="17.28pt">Dataset Format</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				Default dataset file format in
+				<fo:inline font-style="italic">Cassandra</fo:inline>
+				module is json. To make compatible
+				<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+				with
+				
+					<fo:basic-link external-destination="url(https://github.com/jsevellec/cassandra-unit/)"><fo:inline>Cassandra-Unit</fo:inline></fo:basic-link><fo:inline hyphenate="false"> [<fo:basic-link external-destination="url(https://github.com/jsevellec/cassandra-unit/)">https://github.com/jsevellec/cassandra-unit/</fo:basic-link>]</fo:inline>
+				
+				file format,
+				<fo:inline font-family="monospace">DataLoader</fo:inline>
+				of
+				Cassandra-Unit
+				project is used, so same json format file is used.
+			</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				Datasets must have next
+				<fo:basic-link internal-destination="ex.cassandra_dataset"><fo:inline>
+					format
+				</fo:inline></fo:basic-link>
+				:
+			</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="ex.cassandra_dataset"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.2. Example of Casssandra Dataset</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e112">{
+    "name" : "",
+    "replicationFactor" : "",
+    "strategy" : "",
+    "columnFamilies" : [{
+        "name" : "",
+        "type" : "",
+        "keyType" : "",
+        "comparatorType" : "",
+        "subComparatorType" : "",
+        "defaultColumnValueType" : "",
+        "comment" : "",
+        "compactionStrategy" : "",
+        "compactionStrategyOptions" : [{
+            "name" : "",
+            "value": ""
+        }],
+        "gcGraceSeconds" : "",
+        "maxCompactionThreshold" : "",
+        "minCompactionThreshold" : "",
+        "readRepairChance" : "",
+        "replicationOnWrite" : "",
+        "columnsMetadata" : [{
+            "name" : "",
+            "validationClass : "",
+            "indexType" : "",
+            "indexName" : ""
+        },
+        ...
+        ]
+        "rows" : [{
+            "key" : "",
+            "columns" : [{
+                "name" : "",
+                "value" : ""
+            },
+            ...
+            ],
+            ...
+            // OR
+            ...
+            "superColumns" : [{
+                "name" : "",
+                "columns" : [{
+                    "name" : "",
+                    "value" : ""
+                },
+                ...
+                ]
+            },
+            ...
+            ]
+        },
+        ...
+        ]
+    },
+    ...
+    ]
+}</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				See
+				<fo:basic-link external-destination="url(https://github.com/jsevellec/cassandra-unit/wiki/What-can-you-set-into-a-dataSet)"><fo:inline>Cassandra-Unit Dataset</fo:inline></fo:basic-link><fo:inline hyphenate="false"> [<fo:basic-link external-destination="url(https://github.com/jsevellec/cassandra-unit/wiki/What-can-you-set-into-a-dataSet)">https://github.com/jsevellec/cassandra-unit/wiki/What-can-you-set-into-a-dataSet</fo:basic-link>]</fo:inline>
+				format for more information.
+			</fo:block></fo:block><fo:block id="d195e119"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Getting Started</fo:marker><fo:block font-size="17.28pt">Getting Started</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block id="d195e122"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Lifecycle Management Strategy</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					First step is defining which lifecycle management strategy is
+					required for your tests. Depending on kind of test you are
+					implementing (unit test, integration test, deployment test, ...)
+					you will require an embedded approach, managed approach or remote
+					approach.
+				</fo:block><fo:block id="d195e127"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Embedded Lifecycle</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						To configure
+						<fo:inline font-weight="bold">embedded</fo:inline>
+						approach you should only instantiate next
+						<fo:basic-link internal-destination="program.cassandra_embedded_conf"><fo:inline>rule</fo:inline></fo:basic-link>
+						:
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.cassandra_embedded_conf"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.3. Embedded Cassandra</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e141"><fo:inline color="gray">@ClassRule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> EmbeddedCassandra embeddedCassandraRule = newEmbeddedCassandraRule().build();</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						By default embedded
+						<fo:inline font-style="italic">Cassandra</fo:inline>
+						rule uses next
+						default values:
+					</fo:block><fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d195e148"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.3. Default Embedded Values</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Target path
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								This is the directory where
+								<fo:inline font-style="italic">Cassandra</fo:inline>
+								server is started and is
+								<fo:inline font-family="monospace">target/cassandra-temp</fo:inline>
+								.
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Cassandra Configuration File
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Location of yaml configuration file. By default a
+								configuration
+								file is provided with correct default parameters.
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Host
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								localhost
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Port
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								By default port used is 9171. Port cannot be configured, and
+								cannot be changed if you provide an alternative Cassandra
+								Configuration File.
+							</fo:block></fo:table-cell>
+						</fo:table-row></fo:table-body></fo:table></fo:block></fo:block><fo:block id="d195e189"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Managed Lifecycle</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						To configure
+						<fo:inline font-weight="bold">managed</fo:inline>
+						approach you should only instantiate next
+						<fo:basic-link internal-destination="program.cassandra_managed_conf"><fo:inline>rule</fo:inline></fo:basic-link>
+						:
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.cassandra_managed_conf"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.4. Managed Cassandra</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e203"><fo:inline color="gray">@ClassRule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> ManagedCassandra managedCassandra = newManagedCassandraRule().build();</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						By default managed
+						<fo:inline font-style="italic">Cassandra</fo:inline>
+						rule uses next
+						default values but can be configured
+						programmatically:
+					</fo:block><fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d195e210"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.4. Default Managed Values</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Target path
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								This is the directory where
+								<fo:inline font-style="italic">Cassandra</fo:inline>
+								server is started and is
+								<fo:inline font-family="monospace">target/cassandra-temp</fo:inline>
+								.
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								CassandraPath
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								<fo:inline font-style="italic">Cassandra</fo:inline>
+								installation directory which by default is
+								retrieved from
+								<fo:inline font-family="monospace">CASSANDRA_HOME</fo:inline>
+								system environment
+								variable.
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Port
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								By default port used is 9160. If port is changed in
+								<fo:inline font-style="italic">Cassandra</fo:inline>
+								configuration file, this port should be configured too here.
+							</fo:block></fo:table-cell>
+						</fo:table-row></fo:table-body></fo:table></fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" margin-left="0.25in" margin-right="0.25in" id="d195e252"><fo:block font-size="14pt" font-weight="bold" hyphenate="false" keep-with-next.within-column="always">Warning</fo:block><fo:block>
+						To start
+						<fo:inline font-style="italic">Cassandra</fo:inline><fo:inline font-family="monospace">java.home</fo:inline>
+						must be set. Normally this variable is already configured, you
+						would need to do nothing.
+					</fo:block></fo:block></fo:block><fo:block id="d195e259"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Remote Lifecycle</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Configuring
+						<fo:inline font-weight="bold">remote</fo:inline>
+						approach
+						does not require any special rule because you (or System
+						like
+						Maven
+						) is the responsible of starting and
+						stopping the server. This mode
+						is used in deployment tests where you
+						are testing your application
+						on real environment.
+					</fo:block></fo:block></fo:block><fo:block id="d195e270"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Configuring Cassandra Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					Next step is configuring
+					<fo:inline font-weight="bold">Cassandra</fo:inline>
+					rule in charge of maintaining
+					<fo:inline font-style="italic">Cassandra</fo:inline>
+					graph into known state by inserting and deleting defined
+					datasets.
+					You must register
+					<fo:inline font-family="monospace">CassandraRule</fo:inline>
+					<fo:inline font-style="italic">JUnit</fo:inline>
+					rule class, which
+					requires a configuration parameter with
+					information like host,
+					port, or cluster name.
+				</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">To make developer's life easier and code more readable, a
+					fluent
+					interface can be used to create these configuration objects.
+					Three
+					different kind of configuration builders exist.
+				</fo:block><fo:block id="d195e289"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Embedded Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						The first one is for configuring a connection to embedded
+						<fo:inline font-style="italic">Cassandra</fo:inline>
+						.
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.embedded_connection_cassandra_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.5. Cassandra with embedded configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e300"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.cassandra.EmbeddedCassandraConfigurationBuilder.newEmbeddedCassandraConfiguration;
+
+<fo:inline color="gray">@Rule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> CassandraRule cassandraRule = <fo:inline font-weight="bold">new</fo:inline> CassandraRule(newEmbeddedCassandraConfiguration().clusterName(<fo:inline font-weight="bold" font-style="italic">"Test Cluster"</fo:inline>).build());</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Host and port parameters are already configured.
+					</fo:block></fo:block><fo:block id="d195e304"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Managed Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						The first one is for configuring a connection to managed
+						<fo:inline font-style="italic">Cassandra</fo:inline>
+						.
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.managed_connection_cassandra_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.6. Cassandra with managed configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e315"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.cassandra.ManagedCassandraConfigurationBuilder.newManagedCassandraConfiguration;
+
+<fo:inline color="gray">@Rule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> CassandraRule cassandraRule = <fo:inline font-weight="bold">new</fo:inline> CassandraRule(newManagedCassandraConfiguration().clusterName(<fo:inline font-weight="bold" font-style="italic">"Test Cluster"</fo:inline>).build());</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Host and port parameters are already configured with default
+						parameters of managed lifecycle. If port is changed, this class
+						provides a method to set it.
+					</fo:block></fo:block><fo:block id="d195e319"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Remote Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Configuring a connection to remote
+						<fo:inline font-style="italic">Cassandra</fo:inline>
+						.
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.remote_connection_cassandra_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.7. Cassandra with remote configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e330"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.cassandra.RemoteCassandraConfigurationBuilder.newRemoteCassandraConfiguration;
+
+<fo:inline color="gray">@Rule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> CassandraRule cassandraRule = <fo:inline font-weight="bold">new</fo:inline> CassandraRule(newRemoteCassandraConfiguration().host(<fo:inline font-weight="bold" font-style="italic">"192.168.1.1"</fo:inline>).clusterName(<fo:inline font-weight="bold" font-style="italic">"Test Cluster"</fo:inline>).build());</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Port parameter is already configured with default parameter
+						of managed lifecycle. If port is changed, this class provides a
+						method to set it. Note that host parameter must be specified in
+						this case.
+					</fo:block></fo:block></fo:block><fo:block id="d195e334"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Verifying Data</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					<fo:inline font-family="monospace">@ShouldMatchDataSet</fo:inline>
+					is also supported for
+					<fo:inline font-style="italic">Cassandra</fo:inline>
+					data but we should keep in mind some considerations.
+				</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" margin-left="0.25in" margin-right="0.25in" id="d195e345"><fo:block font-size="14pt" font-weight="bold" hyphenate="false" keep-with-next.within-column="always">Warning</fo:block><fo:block>
+					In
+					<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+					, expectations can only be used over data, not over configuration
+					parameters, so for example fields set in
+					<fo:basic-link internal-destination="ex.cassandra_dataset"><fo:inline>dataset</fo:inline></fo:basic-link>
+					file like compactionStrategy, gcGraceSeconds or
+					maxCompactionThreshold are not used.
+					Maybe in future will be
+					supported but for now only data (keyspace, columnfamilyname,
+					columns, supercolumns, ...) are supported.
+				</fo:block></fo:block></fo:block><fo:block id="d195e353"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Full Example</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					To show how to use
+					<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+					with
+					<fo:inline font-style="italic">Cassandra</fo:inline>
+					,
+					we are going to create a
+					very simple application.
+				</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					<fo:basic-link internal-destination="program.person_cassandra_manager"><fo:inline>PersonManager</fo:inline></fo:basic-link>
+					is the business class responsible of getting and updating person's
+					car.
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.person_cassandra_manager"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.8. PersonCar cassandra with manager.</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e372"><fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">class</fo:inline> PersonManager {
+	
+	<fo:inline font-weight="bold">private</fo:inline> ColumnFamilyTemplate&lt;String, String&gt; template;
+	
+	<fo:inline font-weight="bold">public</fo:inline> PersonManager(String clusterName, String keyspaceName, String host) {
+		Cluster cluster = HFactory.getOrCreateCluster(clusterName, host);
+		Keyspace keyspace = HFactory.createKeyspace(keyspaceName, cluster);
+		
+        template = <fo:inline font-weight="bold">new</fo:inline> ThriftColumnFamilyTemplate&lt;String, String&gt;(keyspace,
+        		<fo:inline font-weight="bold" font-style="italic">"personFamilyName"</fo:inline>, 
+                                                               StringSerializer.get(),        
+                                                               StringSerializer.get());
+		
+	}
+	
+	<fo:inline font-weight="bold">public</fo:inline> String getCarByPersonName(String name) {
+		ColumnFamilyResult&lt;String, String&gt; queryColumns = template.queryColumns(name);
+		<fo:inline font-weight="bold">return</fo:inline> queryColumns.getString(<fo:inline font-weight="bold" font-style="italic">"car"</fo:inline>);
+	}
+	
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">void</fo:inline> updateCarByPersonName(String name, String car) {
+		ColumnFamilyUpdater&lt;String, String&gt; createUpdater = template.createUpdater(name);
+		createUpdater.setString(<fo:inline font-weight="bold" font-style="italic">"car"</fo:inline>, car);
+		
+		template.update(createUpdater);
+	}
+	
+}</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					And now one unit test and one integration test is written:
+				</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					For
+					<fo:basic-link internal-destination="program.person_cassandra_unit"><fo:inline>unit</fo:inline></fo:basic-link>
+					test we are going to use embedded approach:
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.person_cassandra_unit"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.9. Cassandra with embedded configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e384"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> org.junit.Assert.assertThat;
+<fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> org.hamcrest.CoreMatchers.is;
+
+<fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.cassandra.EmbeddedCassandra.EmbeddedCassandraRuleBuilder.newEmbeddedCassandraRule;
+<fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.cassandra.EmbeddedCassandraConfigurationBuilder.newEmbeddedCassandraConfiguration;
+
+<fo:inline font-weight="bold">import</fo:inline> org.junit.ClassRule;
+<fo:inline font-weight="bold">import</fo:inline> org.junit.Rule;
+<fo:inline font-weight="bold">import</fo:inline> org.junit.Test;
+
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.annotation.UsingDataSet;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.cassandra.CassandraRule;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.cassandra.EmbeddedCassandra;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.core.LoadStrategyEnum;
+
+<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">class</fo:inline> WhenPersonWantsToKnowItsCar {
+
+	<fo:inline color="gray">@ClassRule</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> EmbeddedCassandra embeddedCassandraRule = newEmbeddedCassandraRule().build();
+	
+	<fo:inline color="gray">@Rule</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> CassandraRule cassandraRule = <fo:inline font-weight="bold">new</fo:inline> CassandraRule(newEmbeddedCassandraConfiguration().clusterName(<fo:inline font-weight="bold" font-style="italic">"Test Cluster"</fo:inline>).build());
+	
+	
+	<fo:inline color="gray">@Test</fo:inline>
+	<fo:inline color="gray">@UsingDataSet(locations="persons.json", loadStrategy=LoadStrategyEnum.CLEAN_INSERT)</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">void</fo:inline> car_should_be_returned() {
+		
+		PersonManager personManager = <fo:inline font-weight="bold">new</fo:inline> PersonManager(<fo:inline font-weight="bold" font-style="italic">"Test Cluster"</fo:inline>, <fo:inline font-weight="bold" font-style="italic">"persons"</fo:inline>, <fo:inline font-weight="bold" font-style="italic">"localhost:9171"</fo:inline>);
+		String car = personManager.getCarByPersonName(<fo:inline font-weight="bold" font-style="italic">"mary"</fo:inline>);
+		
+		assertThat(car, is(<fo:inline font-weight="bold" font-style="italic">"ford"</fo:inline>));
+		
+	}
+	
+}</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					And as
+					<fo:basic-link internal-destination="program.person_cassandra_integration"><fo:inline>integration test</fo:inline></fo:basic-link>
+					, the managed one:
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.person_cassandra_integration"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.10. Cassandra with managed configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e394"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.cassandra.ManagedCassandraConfigurationBuilder.newManagedCassandraConfiguration;
+<fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.cassandra.ManagedCassandra.ManagedCassandraRuleBuilder.newManagedCassandraRule;
+
+<fo:inline font-weight="bold">import</fo:inline> org.junit.ClassRule;
+<fo:inline font-weight="bold">import</fo:inline> org.junit.Rule;
+<fo:inline font-weight="bold">import</fo:inline> org.junit.Test;
+
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.annotation.ShouldMatchDataSet;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.annotation.UsingDataSet;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.cassandra.CassandraRule;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.cassandra.ManagedCassandra;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.core.LoadStrategyEnum;
+
+<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">class</fo:inline> WhenPersonWantsToUpdateItsCar {
+
+	<fo:inline font-weight="bold">static</fo:inline> {
+		System.setProperty(<fo:inline font-weight="bold" font-style="italic">"CASSANDRA_HOME"</fo:inline>, <fo:inline font-weight="bold" font-style="italic">"/opt/cassandra"</fo:inline>);
+	}
+	
+	<fo:inline color="gray">@ClassRule</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> ManagedCassandra managedCassandra = newManagedCassandraRule().build();
+	
+	<fo:inline color="gray">@Rule</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> CassandraRule cassandraRule = <fo:inline font-weight="bold">new</fo:inline> CassandraRule(newManagedCassandraConfiguration().clusterName(<fo:inline font-weight="bold" font-style="italic">"Test Cluster"</fo:inline>).build());
+	
+	<fo:inline color="gray">@Test</fo:inline>
+	<fo:inline color="gray">@UsingDataSet(locations="persons.json", loadStrategy=LoadStrategyEnum.CLEAN_INSERT)</fo:inline>
+	<fo:inline color="gray">@ShouldMatchDataSet(location="expected-persons.json")</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">void</fo:inline> new_car_should_be_updated() {
+		
+		PersonManager personManager = <fo:inline font-weight="bold">new</fo:inline> PersonManager(<fo:inline font-weight="bold" font-style="italic">"Test Cluster"</fo:inline>, <fo:inline font-weight="bold" font-style="italic">"persons"</fo:inline>, <fo:inline font-weight="bold" font-style="italic">"localhost:9171"</fo:inline>);
+		personManager.updateCarByPersonName(<fo:inline font-weight="bold" font-style="italic">"john"</fo:inline>, <fo:inline font-weight="bold" font-style="italic">"opel"</fo:inline>);
+		
+	}
+	
+}</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">Note that in both cases we are using the same dataset as
+					initial state, which looks like:
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.expected_cassandra_file"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.11. persons.json Cassandra file</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d195e401">{
+    "name" : "persons",
+    "columnFamilies" : [{
+        "name" : "personFamilyName",
+	"keyType" : "UTF8Type",
+	"defaultColumnValueType" : "UTF8Type",
+	"comparatorType" : "UTF8Type",
+        "rows" : [{
+            "key" : "john",
+            "columns" : [{
+                "name" : "age",
+                "value" : "22"
+            },
+            {
+                "name" : "car",
+                "value" : "toyota"
+            }]
+        },
+        {
+            "key" : "mary",
+            "columns" : [{
+                "name" : "age",
+                "value" : "33"
+            },
+            {
+                "name" : "car",
+                "value" : "ford"
+            }]
+        }]
+    }]
+}</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block></fo:flow></fo:page-sequence></fo:root>

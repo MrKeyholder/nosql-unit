@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="serif,Symbol,ZapfDingbats" font-size="10pt" text-align="justify" line-height="normal" font-selection-strategy="character-by-character" line-height-shift-adjustment="disregard-shifts" writing-mode="lr-tb" language="en"><fo:layout-master-set><fo:simple-page-master master-name="blank" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body display-align="center" margin-bottom="0.5in" margin-top="0.5in" region-name="blank-body"/><fo:region-before region-name="xsl-region-before-blank" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-blank" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:page-sequence-master master-name="titlepage"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="titlepage-first" page-position="first"/><fo:conditional-page-master-reference master-reference="titlepage-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="titlepage-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="lot"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="lot-first" page-position="first"/><fo:conditional-page-master-reference master-reference="lot-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="lot-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="front"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="front-first" page-position="first"/><fo:conditional-page-master-reference master-reference="front-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="front-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="body"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="body-first" page-position="first"/><fo:conditional-page-master-reference master-reference="body-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="body-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="back"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="back-first" page-position="first"/><fo:conditional-page-master-reference master-reference="back-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="back-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="index"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="index-first" page-position="first"/><fo:conditional-page-master-reference master-reference="index-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="index-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master></fo:layout-master-set><fo:page-sequence xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions" hyphenate="true" master-reference="body" language="en" format="1" initial-page-number="auto" force-page-count="no-force" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2"><fo:static-content flow-name="xsl-region-before-first"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-odd"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>Redis Engine</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-even"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>Redis Engine</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-blank"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-footnote-separator"><fo:block><fo:leader color="black" leader-pattern="rule" leader-length="1in"/></fo:block></fo:static-content><fo:static-content flow-name="blank-body"><fo:block text-align="center"/></fo:static-content><fo:static-content flow-name="xsl-region-after-first"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-odd"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-even"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-blank"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:flow flow-name="xsl-region-body" start-indent="4pc" end-indent="0pt"><fo:block id="redis"><fo:block font-family="sans-serif,Symbol,ZapfDingbats"><fo:block margin-left="0pt"><fo:block font-size="24.8832pt" font-weight="bold"><fo:block keep-with-next.within-column="always" space-before.optimum="10pt" space-before.minimum="10pt * 0.8" space-before.maximum="10pt * 1.2" hyphenate="false" text-align="start" start-indent="0pt" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2">Chapter 1. Redis Engine</fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" id="toc...redis"><fo:block><fo:block><fo:block space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="0pt" start-indent="0pt" font-size="17.28pt" font-weight="bold" font-family="sans-serif,Symbol,ZapfDingbats">Table of Contents</fo:block></fo:block></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d547e4">Redis</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d547e4"><fo:page-number-citation ref-id="d547e4"/></fo:basic-link></fo:inline></fo:block><fo:block id="toc.redis.d547e4" margin-left="24pt"><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d547e65">Maven Setup</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d547e65"><fo:page-number-citation ref-id="d547e65"/></fo:basic-link></fo:inline></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d547e81">Dataset Format</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d547e81"><fo:page-number-citation ref-id="d547e81"/></fo:basic-link></fo:inline></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d547e153">Getting Started</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d547e153"><fo:page-number-citation ref-id="d547e153"/></fo:basic-link></fo:inline></fo:block></fo:block></fo:block><fo:block id="d547e4"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Redis</fo:marker><fo:block font-size="20.735999999999997pt" border-top="0.5pt solid black" border-bottom="0.5pt solid black" padding-top="6pt" padding-bottom="3pt">Redis</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Redis
+			is an open source, advanced key-value store. It is often referred to
+			as a data structure server since keys can contain strings, hashes,
+			lists, sets and sorted sets.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+			supports
+			<fo:inline font-style="italic">Redis</fo:inline>
+			by using next classes:
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d547e22"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.1. Lifecycle Management Rules</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>Embedded</fo:block></fo:table-cell>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.redis.EmbeddedRedis
+						</fo:inline>
+					</fo:block></fo:table-cell>
+				</fo:table-row><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>Managed</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.redis.ManagedRedis
+						</fo:inline>
+					</fo:block></fo:table-cell>
+				</fo:table-row></fo:table-body></fo:table></fo:block>
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d547e50"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.2. Manager Rule</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>NoSQLUnit Management</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.redis.RedisRule
+						</fo:inline>
+					</fo:block></fo:table-cell>
+				</fo:table-row></fo:table-body></fo:table></fo:block>
+		</fo:block><fo:block id="d547e65"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Maven Setup</fo:marker><fo:block font-size="17.28pt">Maven Setup</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				To use
+				<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+				with
+				Redis
+				you only need to add next
+				dependency:
+			</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="conf.nosqlunit_redis_dep"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.1. NoSqlUnit Maven Repository</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e79"><fo:inline font-weight="bold">&lt;dependency&gt;</fo:inline>
+	<fo:inline font-weight="bold">&lt;groupId&gt;</fo:inline>com.lordofthejars<fo:inline font-weight="bold">&lt;/groupId&gt;</fo:inline>
+	<fo:inline font-weight="bold">&lt;artifactId&gt;</fo:inline>nosqlunit-redis<fo:inline font-weight="bold">&lt;/artifactId&gt;</fo:inline>
+	<fo:inline font-weight="bold">&lt;version&gt;</fo:inline>${version.nosqlunit}<fo:inline font-weight="bold">&lt;/version&gt;</fo:inline>
+<fo:inline font-weight="bold">&lt;/dependency&gt;</fo:inline></fo:block></fo:block></fo:block></fo:block><fo:block id="d547e81"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Dataset Format</fo:marker><fo:block font-size="17.28pt">Dataset Format</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				Default dataset file format in
+				<fo:inline font-style="italic">Redis</fo:inline>
+				module is json.
+			</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				Datasets must have next
+				<fo:basic-link internal-destination="ex.redis_dataset"><fo:inline>
+					format
+				</fo:inline></fo:basic-link>
+				:
+			</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="ex.redis_dataset"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.2. Example of Redis Dataset</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e97">{
+"data":[
+			{"simple": [
+				{
+					"key":"key1", 
+					"value":"value1"
+				}
+				]
+			},
+      		{"list": [{
+              			"key":"key3",
+              			"values":[
+                  			{"value":"value3"},
+                  			{"value":"value4"}
+              			]
+					  }]
+      		},
+      		
+     		{"sortset": [{
+                     "key":"key4",
+                     "values":[
+                           {"score":2, "value":"value5" },{"score":3, "value":1 }, {"score":1, "value":"value6" }]
+                 }]
+      		}, 
+      		{"hash": [
+      					{
+      						"key":"user",
+      						"values":[
+      							{"field":"name", "value":"alex"},
+      							{"field":"password", "value":"alex"}
+      						]
+      					}
+      				]
+      		},
+      		{"set":[{
+              			"key":"key3",
+              			"values":[
+                  			{"value":"value3"},
+                  			{"value":"value4"}
+              			]
+					  }]
+      		}
+]
+}</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				Root element must be called
+				<fo:inline font-style="italic">data</fo:inline>
+				, and then depending on kind of structured data we need to store,
+				one or more of next elements should appear. Note that key field is
+				used to set the key of the element, and value field is used to set a
+				value.
+			</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				<fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d547e106"><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d547e107"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+							<fo:inline font-style="italic">simple</fo:inline>
+							:
+							In case we want to store simple key/value elements. This
+							element
+							will contain an array of key/value entries.
+						</fo:block></fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d547e113"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+							<fo:inline font-style="italic">list</fo:inline>
+							:
+							In case we want to store a key with a list of values. This
+							element
+							contain a
+							<fo:inline font-style="italic">key</fo:inline>
+							field
+							for key name and
+							<fo:inline font-style="italic">values</fo:inline>
+							field
+							with an array of values.
+						</fo:block></fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d547e125"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+							<fo:inline font-style="italic">set</fo:inline>
+							In case we want to store a key within a set (no duplicates
+							allowed). Structure is the same as list element.
+						</fo:block></fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d547e131"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+							<fo:inline font-style="italic">sortset</fo:inline>
+							:
+							In case we want to store a key within a sorted set. This element
+							contain the key, and an array of values, which each one, apart
+							from value field, also contain
+							<fo:inline font-style="italic">score</fo:inline>
+							field of type Number, to set the order into sorted set.
+						</fo:block></fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d547e140"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+							<fo:inline font-style="italic">hash</fo:inline>
+							:
+							In case we want to store a key within a map of field/value. In
+							this case
+							<fo:inline font-style="italic">field</fo:inline>
+							element set the field name, and
+							<fo:inline font-style="italic">value</fo:inline>
+							set the
+							value of that field.
+						</fo:block></fo:block></fo:list-item-body></fo:list-item></fo:list-block>
+			</fo:block></fo:block><fo:block id="d547e153"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Getting Started</fo:marker><fo:block font-size="17.28pt">Getting Started</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block id="d547e156"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Lifecycle Management Strategy</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					First step is defining which lifecycle management strategy is
+					required for your tests. Depending on kind of test you are
+					implementing (unit test, integration test, deployment test, ...)
+					you will require an embedded approach, managed approach or remote
+					approach.
+				</fo:block><fo:block id="d547e161"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Embedded Lifecycle</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						To configure
+						<fo:inline font-weight="bold">embedded</fo:inline>
+						approach you should only instantiate next
+						<fo:basic-link internal-destination="program.redis_embedded_conf"><fo:inline>rule</fo:inline></fo:basic-link>
+						:
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.redis_embedded_conf"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.3. Embedded Redis</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e175"><fo:inline color="gray">@ClassRule</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> EmbeddedRedis embeddedRedis = newEmbeddedRedisRule().build();</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						By default managed
+						<fo:inline font-style="italic">Redis</fo:inline>
+						rule uses next
+						default values but can be configured
+						programmatically:
+					</fo:block><fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d547e182"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.3. Default Embedded Values</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Target path
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								This is the directory where
+								<fo:inline font-style="italic">Redis</fo:inline>
+								embedded instance is started and is
+								<fo:inline font-family="monospace">target/redis-test-data/impermanent-db</fo:inline>
+								.
+							</fo:block></fo:table-cell>
+						</fo:table-row></fo:table-body></fo:table></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">Note that target path is only used as a configuration
+						parameter to allow multiple instances of embedded in-memory Redis engine.
+					</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">For more information about embedded in-memory Redis take a tour to section: <fo:inline>Embedded In-Memory Redis</fo:inline></fo:block></fo:block><fo:block id="d547e205"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Managed Lifecycle</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						To configure
+						<fo:inline font-weight="bold">managed</fo:inline>
+						approach you should only instantiate next
+						<fo:basic-link internal-destination="program.redis_managed_conf"><fo:inline>rule</fo:inline></fo:basic-link>
+						:
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.redis_managed_conf"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.4. Managed Redis</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e219"><fo:inline color="gray">@ClassRule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> ManagedRedis managedRedis = newManagedRedisRule().redisPath(<fo:inline font-weight="bold" font-style="italic">"/opt/redis-2.4.16"</fo:inline>).build();</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						By default managed
+						<fo:inline font-style="italic">Redis</fo:inline>
+						rule uses next
+						default values but can be configured
+						programmatically:
+					</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						<fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d547e228"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.4. Default Managed Values</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+								<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+									Target path
+								</fo:block></fo:table-cell>
+								<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+									This is the directory where
+									<fo:inline font-style="italic">Redis</fo:inline>
+									server is started and is
+									<fo:inline font-family="monospace">target/redis-temp</fo:inline>
+									.
+								</fo:block></fo:table-cell>
+							</fo:table-row><fo:table-row>
+								<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+									RedisPath
+								</fo:block></fo:table-cell>
+								<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+									<fo:inline font-style="italic">Cassandra</fo:inline>
+									installation directory which by default is
+									retrieved from
+									<fo:inline font-family="monospace">REDIS_HOME</fo:inline>
+									system environment
+									variable.
+								</fo:block></fo:table-cell>
+							</fo:table-row><fo:table-row>
+								<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+									Port
+								</fo:block></fo:table-cell>
+								<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+									By default port used is 6379. If port is changed in
+									<fo:inline font-style="italic">Redis</fo:inline>
+									configuration file, this port should be configured too here.
+								</fo:block></fo:table-cell>
+							</fo:table-row><fo:table-row>
+								<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+									Configuration File
+								</fo:block></fo:table-cell>
+								<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+									By default
+									<fo:inline font-style="italic">Redis</fo:inline>
+									can work with no configuration file, it uses default values,
+									but if we need to start
+									<fo:inline font-style="italic">Redis</fo:inline>
+									with an specific configuration file located in any directory
+									file path should be set.
+								</fo:block></fo:table-cell>
+							</fo:table-row></fo:table-body></fo:table></fo:block>
+					</fo:block></fo:block><fo:block id="d547e285"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Remote Lifecycle</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Configuring
+						<fo:inline font-weight="bold">remote</fo:inline>
+						approach
+						does not require any special rule because you (or System
+						like
+						Maven
+						) is the responsible of starting and
+						stopping the server. This mode
+						is used in deployment tests where you
+						are testing your application
+						on real environment.
+					</fo:block></fo:block></fo:block><fo:block id="d547e296"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Configuring Redis Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					Next step is configuring
+					<fo:inline font-weight="bold">Redis</fo:inline>
+					rule in charge of maintaining
+					<fo:inline font-style="italic">Redis</fo:inline>
+					store into known state by inserting and deleting defined
+					datasets.
+					You must register
+					<fo:inline font-family="monospace">RedisRule</fo:inline>
+					<fo:inline font-style="italic">JUnit</fo:inline>
+					rule class, which
+					requires a configuration parameter with
+					information like host,
+					port, or cluster name.
+				</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">To make developer's life easier and code more readable, a
+					fluent
+					interface can be used to create these configuration objects.
+					Three
+					different kind of configuration builders exist.
+				</fo:block><fo:block id="d547e315"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Embedded Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						The first one is for configuring an embedded connection to managed
+						<fo:inline font-style="italic">Redis</fo:inline>
+						.
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.embedded_connection_redis_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.5. Redis with embedded configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e326"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.redis.RedisRule.RedisRuleBuilder.newRedisRule;
+						
+<fo:inline color="gray">@Rule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> RedisRule redisRule = newRedisRule().defaultEmbeddedRedis();
+						</fo:block></fo:block></fo:block></fo:block><fo:block id="d547e328"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Managed Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Configuring a connection to managed
+						<fo:inline font-style="italic">Redis</fo:inline>
+						.
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.managed_connection_redis_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.6. Redis with managed configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e339"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.redis.ManagedRedisConfigurationBuilder.newManagedRedisConfiguration;
+						
+<fo:inline color="gray">@Rule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> RedisRule redisRule = <fo:inline font-weight="bold">new</fo:inline> RedisRule(newManagedRedisConfiguration().build());
+						</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Host and port parameters are already configured with default
+						parameters of managed lifecycle. If port is changed, this class
+						provides a method to set it.
+					</fo:block></fo:block><fo:block id="d547e343"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Remote Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Configuring a connection to remote
+						<fo:inline font-style="italic">Redis</fo:inline>
+						.
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.remote_connection_redis_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.7. Redis with remote configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e354"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.redis.RemoteRedisConfigurationBuilder.newRemoteRedisConfiguration;
+
+<fo:inline color="gray">@Rule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> RedisRule redisRule = <fo:inline font-weight="bold">new</fo:inline> RedisRule(newRemoteRedisConfiguration().host(<fo:inline font-weight="bold" font-style="italic">"192.168.1.1"</fo:inline>).build());</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Port parameter is already configured with default parameter
+						of managed lifecycle. If port is changed, this class provides a
+						method to set it. Note that host parameter must be specified in
+						this case.
+					</fo:block></fo:block><fo:block id="d547e358"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Shard Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">Redis connection can also be configured as shard using
+						ShardedJedis capabilities.
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.shard_connection_redis_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.8. Redis with remote configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e366"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.redis.RemoteRedisConfigurationBuilder.newRemoteRedisConfiguration;
+
+<fo:inline color="gray">@Rule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> RedisRule redisRule = <fo:inline font-weight="bold">new</fo:inline> RedisRule(newShardedRedisConfiguration()
+				.shard(host(<fo:inline font-weight="bold" font-style="italic">"127.0.0.1"</fo:inline>), port(ManagedRedis.DEFAULT_PORT))
+					.password(<fo:inline font-weight="bold" font-style="italic">"a"</fo:inline>)
+					.timeout(1000)
+					.weight(1000)
+				.shard(host(<fo:inline font-weight="bold" font-style="italic">"127.0.0.1"</fo:inline>), port(ManagedRedis.DEFAULT_PORT + 1))
+					.password(<fo:inline font-weight="bold" font-style="italic">"b"</fo:inline>)
+					.timeout(3000)
+					.weight(3000)
+				.build());</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Note that only
+						<fo:block color="red">&lt;methodparam&gt;host&lt;/methodparam&gt;</fo:block>
+						and
+						<fo:block color="red">&lt;methodparam&gt;port&lt;/methodparam&gt;</fo:block>
+						is mandatory, the other ones uses default values.
+					</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						<fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d547e378"><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d547e379"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+									<fo:inline font-style="italic">password</fo:inline>
+									:
+									In case repository is protected with password this attribute
+									is used as password. Default values is null.
+								</fo:block></fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d547e385"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+									<fo:inline font-style="italic">timeout</fo:inline>
+									:
+									Timeout for shard. By default timeout is set to 2 seconds.
+								</fo:block></fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d547e391"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+									<fo:inline font-style="italic">weight</fo:inline>
+									:
+									The weight of that shard over the other ones. By default is 1.
+								</fo:block></fo:block></fo:list-item-body></fo:list-item></fo:list-block>
+					</fo:block></fo:block></fo:block><fo:block id="d547e398"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Verifying Data</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					<fo:inline font-family="monospace">@ShouldMatchDataSet</fo:inline>
+					is also supported for
+					<fo:inline font-style="italic">Redis</fo:inline>
+					engine.
+				</fo:block></fo:block><fo:block id="d547e409"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Full Example</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					To show how to use
+					<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+					with
+					<fo:inline font-style="italic">Redis</fo:inline>
+					,
+					we are going to create a
+					very simple application.
+				</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					<fo:basic-link internal-destination="program.book_redis_manager"><fo:inline>BookManager</fo:inline></fo:basic-link>
+					is the business class responsible of inserting new books and
+					finding books by their title.
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.book_redis_manager"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.9. Book manager with Redis</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e428"><fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">class</fo:inline> BookManager {
+	
+	<fo:inline font-weight="bold">private</fo:inline> <fo:inline font-weight="bold">static</fo:inline> <fo:inline font-weight="bold">final</fo:inline> String TITLE_FIELD_NAME = <fo:inline font-weight="bold" font-style="italic">"title"</fo:inline>;
+	<fo:inline font-weight="bold">private</fo:inline> <fo:inline font-weight="bold">static</fo:inline> <fo:inline font-weight="bold">final</fo:inline> String NUMBER_OF_PAGES = <fo:inline font-weight="bold" font-style="italic">"numberOfPages"</fo:inline>;
+	
+	<fo:inline font-weight="bold">private</fo:inline> Jedis jedis;
+	
+	<fo:inline font-weight="bold">public</fo:inline> BookManager(Jedis jedis) {
+		<fo:inline font-weight="bold">this</fo:inline>.jedis = jedis;
+	}
+	
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">void</fo:inline> insertBook(Book book) {
+		
+		Map&lt;String, String&gt; fields = <fo:inline font-weight="bold">new</fo:inline> HashMap&lt;String, String&gt;();
+		
+		fields.put(TITLE_FIELD_NAME, book.getTitle());
+		fields.put(NUMBER_OF_PAGES, Integer.toString(book.getNumberOfPages()));
+		
+		jedis.hmset(book.getTitle(), fields);
+	}
+
+	<fo:inline font-weight="bold">public</fo:inline> Book findBookByTitle(String title) {
+		
+		Map&lt;String, String&gt; fields = jedis.hgetAll(title);
+		<fo:inline font-weight="bold">return</fo:inline> <fo:inline font-weight="bold">new</fo:inline> Book(fields.get(TITLE_FIELD_NAME), Integer.parseInt(fields.get(NUMBER_OF_PAGES)));
+		
+	}
+	
+}</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					And now one integration test is written:
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.book_redis_integration"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.10. Redis with managed configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e435"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.redis.RedisRule.RedisRuleBuilder.newRedisRule;
+<fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.redis.ManagedRedis.ManagedRedisRuleBuilder.newManagedRedisRule;
+
+<fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> org.junit.Assert.assertThat;
+<fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> org.hamcrest.CoreMatchers.is;
+
+<fo:inline font-weight="bold">import</fo:inline> org.junit.ClassRule;
+<fo:inline font-weight="bold">import</fo:inline> org.junit.Rule;
+<fo:inline font-weight="bold">import</fo:inline> org.junit.Test;
+
+<fo:inline font-weight="bold">import</fo:inline> redis.clients.jedis.Jedis;
+
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.annotation.UsingDataSet;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.core.LoadStrategyEnum;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.demo.model.Book;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.redis.ManagedRedis;
+<fo:inline font-weight="bold">import</fo:inline> com.lordofthejars.nosqlunit.redis.RedisRule;
+
+<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">class</fo:inline> WhenYouFindABook {
+
+	<fo:inline font-weight="bold">static</fo:inline> {
+		System.setProperty(<fo:inline font-weight="bold" font-style="italic">"REDIS_HOME"</fo:inline>, <fo:inline font-weight="bold" font-style="italic">"/opt/redis-2.4.16"</fo:inline>);
+	}
+
+	<fo:inline color="gray">@ClassRule</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> ManagedRedis managedRedis = newManagedRedisRule().build();
+
+	<fo:inline color="gray">@Rule</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> RedisRule redisRule = newRedisRule().defaultManagedRedis();
+	
+	<fo:inline color="gray">@Test</fo:inline>
+	<fo:inline color="gray">@UsingDataSet(locations="book.json", loadStrategy=LoadStrategyEnum.CLEAN_INSERT)</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">void</fo:inline> book_should_be_returned_if_title_is_in_database() {
+		
+		BookManager bookManager = <fo:inline font-weight="bold">new</fo:inline> BookManager(<fo:inline font-weight="bold">new</fo:inline> Jedis(<fo:inline font-weight="bold" font-style="italic">"localhost"</fo:inline>));
+		Book findBook = bookManager.findBookByTitle(<fo:inline font-weight="bold" font-style="italic">"The Hobbit"</fo:inline>);
+		
+		assertThat(findBook, is(<fo:inline font-weight="bold">new</fo:inline> Book(<fo:inline font-weight="bold" font-style="italic">"The Hobbit"</fo:inline>, 293)));
+		
+	}
+
+}</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">And dataset used is:
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.expected_redis_file"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.11. book.json Redis file</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d547e442">{
+"data":[	
+      		{"hash": [
+      					{
+      						"key":"The Hobbit",
+      						"values":[
+      							{"field":"title", "value":"The Hobbit"},
+      							{"field":"numberOfPages", "value":"293"}
+      						]
+      					}
+      				]
+      		}
+]
+}</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block></fo:flow></fo:page-sequence></fo:root>

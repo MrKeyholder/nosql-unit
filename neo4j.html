@@ -1,0 +1,572 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Neo4j Engine</title><link rel="stylesheet" type="text/css" href="stylesheet.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter" title="Chapter&nbsp;1.&nbsp;Neo4j Engine"><div class="titlepage"><div><div><h2 class="title"><a name="neo4j"></a>Chapter&nbsp;1.&nbsp;Neo4j Engine</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#d219e4">Neo4j</a></span></dt><dd><dl><dt><span class="section"><a href="#d219e90">Maven Setup</a></span></dt><dt><span class="section"><a href="#d219e106">Dataset Format</a></span></dt><dt><span class="section"><a href="#d219e170">Getting Started</a></span></dt></dl></dd></dl></div><div class="section" title="Neo4j"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d219e4"></a>Neo4j</h2></div></div></div><p>
+			<span class="application">Neo4j</span>
+			is a high-performance,
+			<span class="emphasis"><em>NoSQL</em></span>
+			graph database with all the features of a mature and robust database.
+		</p><p>
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			supports
+			<span class="emphasis"><em>Neo4j</em></span>
+			by using next classes:
+		</p><p>
+			</p><table border="1" id="d219e25"><caption>Table&nbsp;1.1.&nbsp;Lifecycle Management Rules</caption><tr>
+					<td>In Memory</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.InMemoryNeo4j
+						</code>
+					</td>
+				</tr><tr>
+					<td>Embedded</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.EmbeddedNeo4j
+						</code>
+					</td>
+				</tr><tr>
+					<td>Managed Wrapping</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.ManagedWrappingNeoServer
+						</code>
+					</td>
+				</tr><tr>
+					<td>Managed</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.ManagedNeoServer
+						</code>
+					</td>
+				</tr></table><p>
+		</p><p>
+			</p><table border="1" id="d219e75"><caption>Table&nbsp;1.2.&nbsp;Manager Rule</caption><tr>
+					<td>NoSQLUnit Management</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.neo4j.Neo4jRule
+						</code>
+					</td>
+				</tr></table><p>
+		</p><div class="section" title="Maven Setup"><div class="titlepage"><div><div><h3 class="title"><a name="d219e90"></a>Maven Setup</h3></div></div></div><p>
+				To use
+				<span class="bold"><strong>NoSQLUnit</strong></span>
+				with
+				<span class="application">Neo4j</span>
+				you only need to add next
+				dependency:
+			</p><div class="example"><a name="conf.nosqlunit_neo4j_dep"></a><p class="title"><b>Example&nbsp;1.1.&nbsp;NoSqlUnit Maven Repository</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-tag" style="color: #000096">&lt;dependency&gt;</strong>
+	<strong class="hl-tag" style="color: #000096">&lt;groupId&gt;</strong>com.lordofthejars<strong class="hl-tag" style="color: #000096">&lt;/groupId&gt;</strong>
+	<strong class="hl-tag" style="color: #000096">&lt;artifactId&gt;</strong>nosqlunit-neo4j<strong class="hl-tag" style="color: #000096">&lt;/artifactId&gt;</strong>
+	<strong class="hl-tag" style="color: #000096">&lt;version&gt;</strong>${version.nosqlunit}<strong class="hl-tag" style="color: #000096">&lt;/version&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/dependency&gt;</strong></pre></div></div><br class="example-break"></div><div class="section" title="Dataset Format"><div class="titlepage"><div><div><h3 class="title"><a name="d219e106"></a>Dataset Format</h3></div></div></div><p>
+				Default dataset file format in
+				<span class="emphasis"><em>Neo4j</em></span>
+				module is
+				<a class="link" href="http://graphml.graphdrawing.org/" target="_top">GraphML</a>
+				.
+				<span class="emphasis"><em>GraphML</em></span>
+				is a comprehensive and easy-to-use file format for graphs.
+			</p><p>
+				Datasets must have next
+				<a class="link" href="#ex.neo4j_dataset" title="Example&nbsp;1.2.&nbsp;Example of GraphML Dataset">
+					format
+				</a>
+				:
+			</p><div class="example"><a name="ex.neo4j_dataset"></a><p class="title"><b>Example&nbsp;1.2.&nbsp;Example of GraphML Dataset</b></p><div class="example-contents"><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<strong class="hl-tag" style="color: #000096">&lt;graphml</strong> <span class="hl-attribute" style="color: #F5844C">xmlns</span>=<span class="hl-value" style="color: #993300">"http://graphml.graphdrawing.org/xmlns"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;key</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"attr1"</span> <span class="hl-attribute" style="color: #F5844C">for</span>=<span class="hl-value" style="color: #993300">"edge"</span> <span class="hl-attribute" style="color: #F5844C">attr.name</span>=<span class="hl-value" style="color: #993300">"attr1"</span> <span class="hl-attribute" style="color: #F5844C">attr.type</span>=<span class="hl-value" style="color: #993300">"float"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;key</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"attr2"</span> <span class="hl-attribute" style="color: #F5844C">for</span>=<span class="hl-value" style="color: #993300">"node"</span> <span class="hl-attribute" style="color: #F5844C">attr.name</span>=<span class="hl-value" style="color: #993300">"attr2"</span> <span class="hl-attribute" style="color: #F5844C">attr.type</span>=<span class="hl-value" style="color: #993300">"string"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;graph</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"G"</span> <span class="hl-attribute" style="color: #F5844C">edgedefault</span>=<span class="hl-value" style="color: #993300">"directed"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;node</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"1"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"attr2"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>value1<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/node&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;node</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"2"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"attr2"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>value2<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/node&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;edge</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"7"</span> <span class="hl-attribute" style="color: #F5844C">source</span>=<span class="hl-value" style="color: #993300">"1"</span> <span class="hl-attribute" style="color: #F5844C">target</span>=<span class="hl-value" style="color: #993300">"2"</span> <span class="hl-attribute" style="color: #F5844C">label</span>=<span class="hl-value" style="color: #993300">"label1"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"attr1"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>float<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/edge&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;/graph&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/graphml&gt;</strong></pre></div></div><br class="example-break"><p>
+				where:
+				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+							<span class="emphasis"><em>graphml</em></span>
+							: the root element of the GraphML document
+						</p></li><li class="listitem"><p>
+							<span class="emphasis"><em>key</em></span>
+							: description for graph element properties, you must define if
+							property type is for nodes or relationships, name, and type of
+							element. In our case string, int, long, float, double and boolean
+							are supported.
+						</p></li><li class="listitem"><p>
+							<span class="emphasis"><em>graph</em></span>
+							: the beginning of the graph representation. In our case only one
+							level of graphs are supported. Inner graphs will be ignored.
+						</p></li><li class="listitem"><p>
+							<span class="emphasis"><em>node</em></span>
+							: the beginning of a vertex representation. Please note that id 0
+							is reserved for reference node, so cannot be used as id.
+						</p></li><li class="listitem"><p>
+							<span class="emphasis"><em>edge</em></span>
+							: the beginning of an edge representation. Source and target
+							attributes are filled with node id. If you want to link with
+							reference node, use a 0 which is the id of root node. Note that
+							label attribute is not in defined in standard definition of
+							GraphML specification; GraphML supports adding new attributes to
+							all GrpahML elements, and label attribute has been added to
+							facilitate the creation of edge labels.
+						</p></li><li class="listitem"><p>
+							<span class="emphasis"><em>data</em></span>
+							: the key/value data associated with a graph element. Data value
+							will be validated against type defined in key element.
+						</p></li></ul></div><p>
+			</p></div><div class="section" title="Getting Started"><div class="titlepage"><div><div><h3 class="title"><a name="d219e170"></a>Getting Started</h3></div></div></div><div class="section" title="Lifecycle Management Strategy"><div class="titlepage"><div><div><h4 class="title"><a name="d219e173"></a>Lifecycle Management Strategy</h4></div></div></div><p>
+					First step is defining which lifecycle management strategy is
+					required for your tests. Depending on kind of test you are
+					implementing (unit test, integration test, deployment test, ...)
+					you will require an in-memory approach, embedded approach, managed
+					approach or remote
+					approach.
+				</p><div class="section" title="In-memory Lifecycle"><div class="titlepage"><div><div><h5 class="title"><a name="d219e178"></a>In-memory Lifecycle</h5></div></div></div><p>
+						To configure
+						<span class="bold"><strong>in-memory</strong></span>
+						approach you should only instantiate next
+						<a class="link" href="#program.neo_inmemory_conf" title="Example&nbsp;1.3.&nbsp;In-Memory Neo4j">rule</a>
+						:
+					</p><div class="example"><a name="program.neo_inmemory_conf"></a><p class="title"><b>Example&nbsp;1.3.&nbsp;In-Memory Neo4j</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.InMemoryNeo4j.InMemoryNeo4jRuleBuilder.newInMemoryNeo4j;
+
+<em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> InMemoryNeo4j inMemoryNeo4j = newInMemoryNeo4j().build();</pre></div></div><br class="example-break"></div><div class="section" title="Embedded Lifecycle"><div class="titlepage"><div><div><h5 class="title"><a name="d219e194"></a>Embedded Lifecycle</h5></div></div></div><p>
+						To configure
+						<span class="bold"><strong>embedded</strong></span>
+						approach you should only instantiate next
+						<a class="link" href="#program.neo_embedded_conf" title="Example&nbsp;1.4.&nbsp;Embedded Neo4j">rule</a>
+						:
+					</p><div class="example"><a name="program.neo_embedded_conf"></a><p class="title"><b>Example&nbsp;1.4.&nbsp;Embedded Neo4j</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.EmbeddedNeo4j.EmbeddedNeo4jRuleBuilder.newEmbeddedNeo4jRule;
+
+<em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> EmbeddedNeo4j embeddedNeo4j = newEmbeddedNeo4jRule().build();</pre></div></div><br class="example-break"><p>
+						By default embedded
+						<span class="emphasis"><em>Neo4j</em></span>
+						rule uses next
+						default values:
+					</p><table id="d219e215"><caption>Table&nbsp;1.3.&nbsp;Default Embedded Values</caption><tr>
+							<td>
+								Target path
+							</td>
+							<td>
+								This is the directory where
+								<span class="emphasis"><em>Neo4j</em></span>
+								server is started and is
+								<code class="constant">target/neo4j-temp</code>
+								.
+							</td>
+						</tr></table></div><div class="section" title="Managed Lifecycle"><div class="titlepage"><div><div><h5 class="title"><a name="d219e232"></a>Managed Lifecycle</h5></div></div></div><p>To configure managed way, two possible approaches can be
+						used:
+					</p><p>
+						The first one is using an
+						<span class="bold"><strong>embedded database wrapped by a server
+						</strong></span>
+						.
+						This is a way to give an embedded database visibility through
+						network (internally we are creating a
+						<code class="classname">WrappingNeoServerBootstrapper</code>
+						instance)
+						:
+					</p><div class="example"><a name="program.neo_wrapped_managed_conf"></a><p class="title"><b>Example&nbsp;1.5.&nbsp;Managed Wrapped Neo4j</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.ManagedWrappingNeoServer.ManagedWrappingNeoServerRuleBuilder.newWrappingNeoServerNeo4jRule;
+
+<em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> ManagedWrappingNeoServer managedWrappingNeoServer = newWrappingNeoServerNeo4jRule().port(<span class="hl-number">8888</span>).build();</pre></div></div><br class="example-break"><p>
+						By default wrapped managed
+						<span class="emphasis"><em>Neo4j</em></span>
+						rule uses next
+						default values, but can be configured
+						programmatically as shown in previous
+						<a class="link" href="#program.neo_wrapped_managed_conf" title="Example&nbsp;1.5.&nbsp;Managed Wrapped Neo4j">example</a>
+						:
+					</p><table id="d219e258"><caption>Table&nbsp;1.4.&nbsp;Default Wrapped Values</caption><tr>
+							<td>
+								Target path
+							</td>
+							<td>
+								The directory where
+								<span class="emphasis"><em>Neo4j</em></span>
+								server is started and is
+								<code class="constant">target/neo4j-temp</code>
+								.
+							</td>
+						</tr><tr>
+							<td>
+								Port
+							</td>
+							<td>
+								Where server is listening incoming messages is 7474.
+							</td>
+						</tr></table><p>
+						The second strategy is
+						<span class="bold"><strong>starting and stopping an already installed
+							server
+						</strong></span>
+						on executing machine, by calling start and stop command lines.
+						Next
+						<a class="link" href="#program.neo_managed_conf" title="Example&nbsp;1.6.&nbsp;Managed Neo4j">rule</a>
+						should be registered:
+					</p><div class="example"><a name="program.neo_managed_conf"></a><p class="title"><b>Example&nbsp;1.6.&nbsp;Managed Neo4j</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.ManagedNeoServer.Neo4jServerRuleBuilder.newManagedNeo4jServerRule;
+
+<em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> ManagedNeoServer managedNeoServer = newManagedNeo4jServerRule().neo4jPath(<strong class="hl-string"><em style="color:red">"/opt/neo4j"</em></strong>).build();</pre></div></div><br class="example-break"><p>
+						By default managed
+						<span class="emphasis"><em>Neo4j</em></span>
+						rule uses next
+						default values, but can be configured
+						programmatically as shown in previous
+						<a class="link" href="#program.neo_managed_conf" title="Example&nbsp;1.6.&nbsp;Managed Neo4j">example</a>
+						:
+					</p><table border="1" id="d219e304"><caption>Table&nbsp;1.5.&nbsp;Default Managed Values</caption><tr>
+							<td>
+								Target path
+							</td>
+							<td>
+								This is the directory where
+								<span class="emphasis"><em>Neo4j</em></span>
+								process will be started and by default is
+								<code class="constant">target/neo4j-temp</code>
+								.
+							</td>
+						</tr><tr>
+							<td>
+								Port
+							</td>
+							<td>
+								Where server is listening incoming messages is 7474.
+							</td>
+						</tr><tr>
+							<td>
+								Neo4jPath
+							</td>
+							<td>
+								<span class="emphasis"><em>Neo4j</em></span>
+								installation directory which by default is
+								retrieved from
+								<code class="varname">NEO4J_HOME</code>
+								system environment
+								variable.
+							</td>
+						</tr></table><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>
+							Versions prior to
+							<span class="emphasis"><em>Neo4j</em></span>
+							1.8, port cannot be configured from command line, and port should
+							be changed manually in
+							<code class="filename">conf/neo4j-server.properties</code>
+							. Although this restriction, if you have configured
+							<span class="emphasis"><em>Neo4j</em></span>
+							to run through a different port, it should be specified too in
+							<code class="classname">ManagedNeoServer</code>
+							rule.
+						</p></div></div><div class="section" title="Remote Lifecycle"><div class="titlepage"><div><div><h5 class="title"><a name="d219e358"></a>Remote Lifecycle</h5></div></div></div><p>
+						Configuring
+						<span class="bold"><strong>remote</strong></span>
+						approach
+						does not require any special rule because you (or System
+						like
+						<span class="application">Maven</span>
+						) is the responsible of starting and
+						stopping the server. This mode
+						is used in deployment tests where you
+						are testing your application
+						on real environment.
+					</p></div></div><div class="section" title="Configuring Neo4j Connection"><div class="titlepage"><div><div><h4 class="title"><a name="d219e369"></a>Configuring Neo4j Connection</h4></div></div></div><p>
+					Next step is configuring
+					<span class="bold"><strong>Neo4j</strong></span>
+					rule in charge of maintaining
+					<span class="emphasis"><em>Neo4j</em></span>
+					graph into known state by inserting and deleting defined
+					datasets.
+					You must register
+					<code class="classname">Neo4jRule</code>
+					<span class="emphasis"><em>JUnit</em></span>
+					rule class, which
+					requires a configuration parameter with
+					information like host,
+					port, uri or target directory.
+				</p><p>To make developer's life easier and code more readable, a
+					fluent
+					interface can be used to create these configuration objects.
+					Two
+					different kind of configuration builders exist.
+				</p><div class="section" title="In-Memory/Embedded Connection"><div class="titlepage"><div><div><h5 class="title"><a name="d219e388"></a>In-Memory/Embedded Connection</h5></div></div></div><p>
+						The first one is for configuring a connection to
+						in-memory/embedded
+						<span class="emphasis"><em>Neo4j</em></span>
+						.
+					</p><div class="example"><a name="program.embedded_connection_neo4j_parameters"></a><p class="title"><b>Example&nbsp;1.7.&nbsp;Neo4j with embedded configuration</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.EmbeddedNeoServerConfigurationBuilder.newEmbeddedNeoServerConfiguration;
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> Neo4jRule neo4jRule = <strong class="hl-keyword">new</strong> Neo4jRule(newEmbeddedNeoServerConfiguration().build());</pre></div></div><br class="example-break"><p>
+						If you are only registering one embedded
+						<span class="emphasis"><em>Neo4j</em></span>
+						instance like previous
+						<a class="link" href="#program.neo_embedded_conf" title="Example&nbsp;1.4.&nbsp;Embedded Neo4j">example</a>
+						,
+						calling
+						<code class="function">build</code>
+						is enough. If you are using more than one
+						<span class="emphasis"><em>Neo4j</em></span>
+						embedded connection like explained in
+						<a class="link" href="#">Simultaneous Engine</a>
+						section,
+						<code class="varname">targetPath</code>
+						shall be provided by using
+						<code class="function">buildFromTargetPath</code>
+						method.
+					</p><p>
+						If you are using in-memory approach mixed with embedded approach,
+						target path for in-memory instance can be found at
+						<code class="constant">InMemoryNeo4j.INMEMORY_NEO4J_TARGET_PATH</code>
+						variable.
+					</p></div><div class="section" title="Remote Connection"><div class="titlepage"><div><div><h5 class="title"><a name="d219e429"></a>Remote Connection</h5></div></div></div><p>
+						The second one is for configuring a connection to remote
+						<span class="emphasis"><em>Neo4j</em></span>
+						server (it is irrelevant at this level if it is wrapped or not).
+						Default values are:
+					</p><table border="1" id="d219e437"><caption>Table&nbsp;1.6.&nbsp;Default Managed Connection Values</caption><tr>
+							<td>Connection URI</td>
+
+							<td>http://localhost:7474/db/data</td>
+						</tr><tr>
+							<td>Authentication</td>
+
+							<td>No authentication parameters.</td>
+						</tr></table><div class="example"><a name="program.managed_neo4j_connection_parameters"></a><p class="title"><b>Example&nbsp;1.8.&nbsp;Neo4j with managed configuration</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.ManagedNeoServerConfigurationBuilder.newManagedNeoServerConfiguration;
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> Neo4jRule neo4jRule = <strong class="hl-keyword">new</strong> Neo4jRule(newManagedNeoServerConfiguration().build());</pre></div></div><br class="example-break"></div></div><div class="section" title="Verifying Graph"><div class="titlepage"><div><div><h4 class="title"><a name="d219e461"></a>Verifying Graph</h4></div></div></div><p>
+					<code class="classname">@ShouldMatchDataSet</code>
+					is also supported for
+					<span class="emphasis"><em>Neo4j</em></span>
+					graphs but we should keep in mind some considerations.
+				</p><p>
+					To compare two graphs, stored graph is exported into
+					<a class="link" href="#ex.neo4j_dataset" title="Example&nbsp;1.2.&nbsp;Example of GraphML Dataset">GraphML</a>
+					format
+					and then is compared with expected
+					<span class="emphasis"><em>GraphML</em></span>
+					using
+					<span class="emphasis"><em>XmlUnit</em></span>
+					framework.
+					This approach implies two aspects to be considered, the
+					first one
+					is that although your graph does not contains any
+					connection to
+					reference node, reference node will
+					appear too with the
+					form (
+					&lt;node id="0"&gt;&lt;/node&gt;
+					). The other aspect is that id's are
+					<span class="emphasis"><em>Neo4j's</em></span>
+					internal id, so when
+					you write the expected file, remember to follow
+					the same id
+					strategy followed by
+					<span class="emphasis"><em>Neo4j</em></span>
+					so id attribute of each node could be
+					matched correctly with
+					generated output. Inserted nodes' id starts from 1 (0 is reserved
+					for reference node), meanwhile edges starts from 0.
+				</p><p>
+					This way to compare graphs may change in future (although this
+					strategy
+					will be always supported).
+				</p><p>
+					As I have noted in
+					<a class="link" href="#">verification section</a>
+					I find that using
+					<code class="classname">@ShouldMatchDataSet</code>
+					is a bad approach during testing because test
+					readibility is
+					affected negatively. So as general guide, my advice
+					is to try to
+					avoid using @ShouldMatchDataSet in your tests as much as possible.
+				</p></div><div class="section" title="Full Example"><div class="titlepage"><div><div><h4 class="title"><a name="d219e499"></a>Full Example</h4></div></div></div><p>
+					To show how to use
+					<span class="bold"><strong>NoSQLUnit</strong></span>
+					with
+					<span class="emphasis"><em>Neo4j</em></span>
+					,
+					we are going to create a
+					very simple application that counts Neo's
+					friends.
+				</p><p>
+					<a class="link" href="#program.matrix_neo4j_manager" title="Example&nbsp;1.9.&nbsp;Neo4j with managed configuration">MatrixManager</a>
+					is the business class responsible of inserting new friends and
+					counting the number of Neo's friends.
+				</p><div class="example"><a name="program.matrix_neo4j_manager"></a><p class="title"><b>Example&nbsp;1.9.&nbsp;Neo4j with managed configuration</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">public</strong> <strong class="hl-keyword">class</strong> MatrixManager {
+
+	<strong class="hl-keyword">public</strong> enum RelTypes <strong class="hl-keyword">implements</strong> RelationshipType {
+		NEO_NODE, KNOWS, CODED_BY
+	}
+
+	<strong class="hl-keyword">private</strong> GraphDatabaseService graphDb;
+
+	<strong class="hl-keyword">public</strong> MatrixManager(GraphDatabaseService graphDatabaseService) {
+		<strong class="hl-keyword">this</strong>.graphDb = graphDatabaseService;
+	}
+
+	<strong class="hl-keyword">public</strong> <strong class="hl-keyword">int</strong> countNeoFriends() {
+
+		Node neoNode = getNeoNode();
+		Traverser friendsTraverser = getFriends(neoNode);
+
+		<strong class="hl-keyword">return</strong> friendsTraverser.getAllNodes().size();
+
+	}
+
+	<strong class="hl-keyword">public</strong> <strong class="hl-keyword">void</strong> addNeoFriend(String name, <strong class="hl-keyword">int</strong> age) {
+		Transaction tx = <strong class="hl-keyword">this</strong>.graphDb.beginTx();
+		<strong class="hl-keyword">try</strong> {
+			Node friend = <strong class="hl-keyword">this</strong>.graphDb.createNode();
+			friend.setProperty(<strong class="hl-string"><em style="color:red">"name"</em></strong>, name);
+			Relationship relationship = getNeoNode().createRelationshipTo(friend, RelTypes.KNOWS);
+			relationship.setProperty(<strong class="hl-string"><em style="color:red">"age"</em></strong>, age);
+			tx.success();
+		} <strong class="hl-keyword">finally</strong> {
+			tx.finish();
+		}
+	}
+
+	<strong class="hl-keyword">private</strong> <strong class="hl-keyword">static</strong> Traverser getFriends(<strong class="hl-keyword">final</strong> Node person) {
+		<strong class="hl-keyword">return</strong> person.traverse(Order.BREADTH_FIRST, StopEvaluator.END_OF_GRAPH, ReturnableEvaluator.ALL_BUT_START_NODE,
+				RelTypes.KNOWS, Direction.OUTGOING);
+	}
+
+	<strong class="hl-keyword">private</strong> Node getNeoNode() {
+		<strong class="hl-keyword">return</strong> graphDb.getReferenceNode().getSingleRelationship(RelTypes.NEO_NODE, Direction.OUTGOING).getEndNode();
+	}
+
+}</pre></div></div><br class="example-break"><p>
+					And now one unit test and one integration test is written:
+				</p><p>
+					For
+					<a class="link" href="#program.matrix_neo4j_unit" title="Example&nbsp;1.10.&nbsp;Neo4j with managed configuration">unit</a>
+					test we are going to use embedded approach:
+				</p><div class="example"><a name="program.matrix_neo4j_unit"></a><p class="title"><b>Example&nbsp;1.10.&nbsp;Neo4j with managed configuration</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> org.junit.Assert.assertThat;
+<strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> org.hamcrest.CoreMatchers.is;
+<strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.EmbeddedNeo4j.EmbeddedNeo4jRuleBuilder.newEmbeddedNeo4jRule;
+<strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.EmbeddedNeoServerConfigurationBuilder.newEmbeddedNeoServerConfiguration;
+
+<strong class="hl-keyword">import</strong> javax.inject.Inject;
+
+<strong class="hl-keyword">import</strong> org.junit.ClassRule;
+<strong class="hl-keyword">import</strong> org.junit.Rule;
+<strong class="hl-keyword">import</strong> org.junit.Test;
+<strong class="hl-keyword">import</strong> org.neo4j.graphdb.GraphDatabaseService;
+
+<strong class="hl-keyword">import</strong> com.lordofthejars.nosqlunit.annotation.UsingDataSet;
+<strong class="hl-keyword">import</strong> com.lordofthejars.nosqlunit.core.LoadStrategyEnum;
+<strong class="hl-keyword">import</strong> com.lordofthejars.nosqlunit.neo4j.EmbeddedNeo4j;
+<strong class="hl-keyword">import</strong> com.lordofthejars.nosqlunit.neo4j.Neo4jRule;
+
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">class</strong> WhenNeoFriendsAreRequired {
+
+	<em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+	<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> EmbeddedNeo4j embeddedNeo4j = newEmbeddedNeo4jRule().build();
+	
+	<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+	<strong class="hl-keyword">public</strong> Neo4jRule neo4jRule = <strong class="hl-keyword">new</strong> Neo4jRule(newEmbeddedNeoServerConfiguration().build(), <strong class="hl-keyword">this</strong>);
+	
+	<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+	<strong class="hl-keyword">private</strong> GraphDatabaseService graphDatabaseService;
+	
+	<em><span class="hl-annotation" style="color: gray">@Test</span></em>
+	<em><span class="hl-annotation" style="color: gray">@UsingDataSet(locations="matrix.xml", loadStrategy=LoadStrategyEnum.CLEAN_INSERT)</span></em>
+	<strong class="hl-keyword">public</strong> <strong class="hl-keyword">void</strong> all_direct_and_inderectly_friends_should_be_counted() {
+		MatrixManager matrixManager = <strong class="hl-keyword">new</strong> MatrixManager(graphDatabaseService);
+		<strong class="hl-keyword">int</strong> countNeoFriends = matrixManager.countNeoFriends();
+		assertThat(countNeoFriends, is(<span class="hl-number">3</span>));
+	}
+	
+}</pre></div></div><br class="example-break"><p>
+					And as
+					<a class="link" href="#program.matrix_neo4j_integration" title="Example&nbsp;1.11.&nbsp;Neo4j with managed configuration">integration test</a>
+					, the managed one:
+				</p><div class="example"><a name="program.matrix_neo4j_integration"></a><p class="title"><b>Example&nbsp;1.11.&nbsp;Neo4j with managed configuration</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.ManagedWrappingNeoServer.ManagedWrappingNeoServerRuleBuilder.newWrappingNeoServerNeo4jRule;
+<strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.ManagedNeoServerConfigurationBuilder.newManagedNeoServerConfiguration;
+
+<strong class="hl-keyword">import</strong> javax.inject.Inject;
+
+<strong class="hl-keyword">import</strong> org.junit.ClassRule;
+<strong class="hl-keyword">import</strong> org.junit.Rule;
+<strong class="hl-keyword">import</strong> org.junit.Test;
+<strong class="hl-keyword">import</strong> org.neo4j.graphdb.GraphDatabaseService;
+
+<strong class="hl-keyword">import</strong> com.lordofthejars.nosqlunit.annotation.ShouldMatchDataSet;
+<strong class="hl-keyword">import</strong> com.lordofthejars.nosqlunit.annotation.UsingDataSet;
+<strong class="hl-keyword">import</strong> com.lordofthejars.nosqlunit.core.LoadStrategyEnum;
+<strong class="hl-keyword">import</strong> com.lordofthejars.nosqlunit.neo4j.ManagedWrappingNeoServer;
+<strong class="hl-keyword">import</strong> com.lordofthejars.nosqlunit.neo4j.Neo4jRule;
+
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">class</strong> WhenNeoMeetsANewFriend {
+
+	<em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+	<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> ManagedWrappingNeoServer managedWrappingNeoServer = newWrappingNeoServerNeo4jRule().build();
+	
+	<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+	<strong class="hl-keyword">public</strong> Neo4jRule neo4jRule = <strong class="hl-keyword">new</strong> Neo4jRule(newManagedNeoServerConfiguration().build(), <strong class="hl-keyword">this</strong>);
+	
+	<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+	<strong class="hl-keyword">private</strong> GraphDatabaseService graphDatabaseService;
+	
+	<em><span class="hl-annotation" style="color: gray">@Test</span></em>
+	<em><span class="hl-annotation" style="color: gray">@UsingDataSet(locations="matrix.xml", loadStrategy=LoadStrategyEnum.CLEAN_INSERT)</span></em>
+	<em><span class="hl-annotation" style="color: gray">@ShouldMatchDataSet(location="expected-matrix.xml")</span></em>
+	<strong class="hl-keyword">public</strong> <strong class="hl-keyword">void</strong> friend_should_be_related_into_neo_graph() {
+		
+		MatrixManager matrixManager = <strong class="hl-keyword">new</strong> MatrixManager(graphDatabaseService);
+		matrixManager.addNeoFriend(<strong class="hl-string"><em style="color:red">"The Oracle"</em></strong>, <span class="hl-number">4</span>);
+	}
+	
+}</pre></div></div><br class="example-break"><p>Note that in both cases we are using the same dataset as
+					initial state, which looks like:
+				</p><div class="example"><a name="program.expected_neo4j_file"></a><p class="title"><b>Example&nbsp;1.12.&nbsp;matrix.xml Neo4j file</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-tag" style="color: #000096">&lt;graphml</strong> <span class="hl-attribute" style="color: #F5844C">xmlns</span>=<span class="hl-value" style="color: #993300">"http://graphml.graphdrawing.org/xmlns"</span>
+         <span class="hl-attribute" style="color: #F5844C">xmlns:xsi</span>=<span class="hl-value" style="color: #993300">"http://www.w3.org/2001/XMLSchema-instance"</span>
+         <span class="hl-attribute" style="color: #F5844C">xsi:schemaLocation</span>=<span class="hl-value" style="color: #993300">"http://graphml.graphdrawing.org/xmlns
+        http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;key</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"name"</span> <span class="hl-attribute" style="color: #F5844C">for</span>=<span class="hl-value" style="color: #993300">"node"</span> <span class="hl-attribute" style="color: #F5844C">attr.name</span>=<span class="hl-value" style="color: #993300">"name"</span> <span class="hl-attribute" style="color: #F5844C">attr.type</span>=<span class="hl-value" style="color: #993300">"string"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;key</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"age"</span> <span class="hl-attribute" style="color: #F5844C">for</span>=<span class="hl-value" style="color: #993300">"edge"</span> <span class="hl-attribute" style="color: #F5844C">attr.name</span>=<span class="hl-value" style="color: #993300">"age"</span> <span class="hl-attribute" style="color: #F5844C">attr.type</span>=<span class="hl-value" style="color: #993300">"int"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;graph</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"G"</span> <span class="hl-attribute" style="color: #F5844C">edgedefault</span>=<span class="hl-value" style="color: #993300">"directed"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;node</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"1"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"name"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Thomas Anderson<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/node&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;node</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"2"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"name"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Trinity<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/node&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;node</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"3"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"name"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Morpheus<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/node&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;node</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"4"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"name"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Agent Smith<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/node&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;node</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"5"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"name"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>The Architect<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/node&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;edge</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"1"</span> <span class="hl-attribute" style="color: #F5844C">source</span>=<span class="hl-value" style="color: #993300">"0"</span> <span class="hl-attribute" style="color: #F5844C">target</span>=<span class="hl-value" style="color: #993300">"1"</span> <span class="hl-attribute" style="color: #F5844C">label</span>=<span class="hl-value" style="color: #993300">"NEO_NODE"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/edge&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;edge</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"2"</span> <span class="hl-attribute" style="color: #F5844C">source</span>=<span class="hl-value" style="color: #993300">"1"</span> <span class="hl-attribute" style="color: #F5844C">target</span>=<span class="hl-value" style="color: #993300">"2"</span> <span class="hl-attribute" style="color: #F5844C">label</span>=<span class="hl-value" style="color: #993300">"KNOWS"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"age"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>3<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/edge&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;edge</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"3"</span> <span class="hl-attribute" style="color: #F5844C">source</span>=<span class="hl-value" style="color: #993300">"1"</span> <span class="hl-attribute" style="color: #F5844C">target</span>=<span class="hl-value" style="color: #993300">"3"</span> <span class="hl-attribute" style="color: #F5844C">label</span>=<span class="hl-value" style="color: #993300">"KNOWS"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"age"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>5<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/edge&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;edge</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"4"</span> <span class="hl-attribute" style="color: #F5844C">source</span>=<span class="hl-value" style="color: #993300">"2"</span> <span class="hl-attribute" style="color: #F5844C">target</span>=<span class="hl-value" style="color: #993300">"3"</span> <span class="hl-attribute" style="color: #F5844C">label</span>=<span class="hl-value" style="color: #993300">"KNOWS"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"age"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>18<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/edge&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;edge</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"5"</span> <span class="hl-attribute" style="color: #F5844C">source</span>=<span class="hl-value" style="color: #993300">"3"</span> <span class="hl-attribute" style="color: #F5844C">target</span>=<span class="hl-value" style="color: #993300">"4"</span> <span class="hl-attribute" style="color: #F5844C">label</span>=<span class="hl-value" style="color: #993300">"KNOWS"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"age"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>20<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/edge&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;edge</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"6"</span> <span class="hl-attribute" style="color: #F5844C">source</span>=<span class="hl-value" style="color: #993300">"4"</span> <span class="hl-attribute" style="color: #F5844C">target</span>=<span class="hl-value" style="color: #993300">"5"</span> <span class="hl-attribute" style="color: #F5844C">label</span>=<span class="hl-value" style="color: #993300">"CODED_BY"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;data</strong> <span class="hl-attribute" style="color: #F5844C">key</span>=<span class="hl-value" style="color: #993300">"age"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>20<strong class="hl-tag" style="color: #000096">&lt;/data&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/edge&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;/graph&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/graphml&gt;</strong></pre></div></div><br class="example-break"></div></div></div></div></body></html>

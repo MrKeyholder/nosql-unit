@@ -1,0 +1,309 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Advanced Usage</title><link rel="stylesheet" type="text/css" href="stylesheet.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter" title="Chapter&nbsp;1.&nbsp;Advanced Usage"><div class="titlepage"><div><div><h2 class="title"><a name="advanced"></a>Chapter&nbsp;1.&nbsp;Advanced Usage</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#d0e4">Embedded In-Memory Redis</a></span></dt><dt><span class="section"><a href="#d0e122">Managing lifecycle of multiple instances</a></span></dt><dt><span class="section"><a href="#d0e140">Fast Way</a></span></dt><dt><span class="section"><a href="#d0e184">Simultaneous engines</a></span></dt><dt><span class="section"><a href="#d0e276">Support for JSR-330</a></span></dt></dl></div><div class="section" title="Embedded In-Memory Redis"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e4"></a>Embedded In-Memory Redis</h2></div></div></div><p>
+			When you are writing unit tests you should keep in mind that they
+			must run fast, which implies, among other
+			things, no interaction with
+			IO subsystem (disk, network, ...). To
+			avoid this interaction in
+			database unit tests, there are embedded
+			in-memory databases like
+			<span class="emphasis"><em>H2</em></span>
+			,
+			<span class="emphasis"><em>HSQLDB</em></span>
+			,
+			<span class="emphasis"><em>Derby</em></span>
+			or in case of
+			<span class="emphasis"><em>NoSQL</em></span>
+			, engines like
+			<span class="emphasis"><em>Neo4j</em></span>
+			or
+			<span class="emphasis"><em>Cassandra</em></span>
+			have their own implementation. But
+			<span class="emphasis"><em>Redis</em></span>
+			does not have any way to create an embedded in-memory instance in
+			Java. For this reason I have written an embedded in-memory
+			<span class="emphasis"><em>Redis</em></span>
+			implementation based on
+			<span class="emphasis"><em>Jedis</em></span>
+			project.
+		</p><p>
+			If you are using
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			you only have to register embedded
+			<span class="emphasis"><em>Redis</em></span>
+			rule as described
+			<a class="link" href="#">here</a>
+			, and internally
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			will create instance for you, and you
+			will be able to
+			<a class="link" href="#advanced.jsr330-title">inject</a>
+			the instance into your code.
+		</p><p>
+			But also can be used outside umbrella of
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			, by instantiating manually, as described in next
+			<a class="link" href="#advanced.instantiate-embedded-redis" title="Example&nbsp;1.1.&nbsp;Embedded In-Memory Redis.">example:</a>
+		</p><div class="example"><a name="advanced.instantiate-embedded-redis"></a><p class="title"><b>Example&nbsp;1.1.&nbsp;Embedded In-Memory Redis.</b></p><div class="example-contents"><pre class="programlisting">EmbeddedRedisBuilder embeddedRedisBuilder = <strong class="hl-keyword">new</strong> EmbeddedRedisBuilder();
+Jedis jedis = embeddedRedisBuilder.createEmbeddedJedis();	
+			</pre></div></div><br class="example-break"><p>Notice that Jedis class is the main class defined by Jedis
+			project but proxied to use in-memory data instead of sending requests
+			to remote server.
+		</p><p>
+			Almost all
+			<span class="emphasis"><em>Redis</em></span>
+			operations have been implemented but it has some limitations:
+		</p><p>
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+						Connection commands do nothing, they do not throw any
+						exception but neither do any action. In fact would not have
+						sense
+						that they do something.
+					</p></li><li class="listitem"><p>
+						Scripting commands are not supported, and an
+						<code class="classname">UnsupportedOperationException</code>
+						will be thrown if they are called.
+					</p></li><li class="listitem"><p>
+						Transaction commands are not supported, but they do not throw
+						any exception, simply returns a null value
+						and in cases of List
+						return type, an empty list is returned.
+					</p></li><li class="listitem"><p>
+						Pub/Sub commands do nothing.
+					</p></li><li class="listitem"><p>
+						Server commands are implemented, but there are some commands
+						that have no sense and returns a constant result:
+					</p><p>
+						<span class="emphasis"><em>move</em></span>
+						always return 1.
+					</p><p>
+						<span class="emphasis"><em>debug</em></span>
+						commands throws an UnsupportedOperationException.
+					</p><p>
+						<span class="emphasis"><em>bgrewriteaof, save, bgsave, configSet, configResetStat,
+							salveOf, slaveOfNone and slowLogReset
+						</em></span>
+						returns an OK.
+					</p><p>
+						<span class="emphasis"><em>configGet, slowLogGet and slowLogGetBinary</em></span>
+						returns an empty list.
+					</p></li><li class="listitem"><p>
+						From Key commands, only sort by pattern is not supported.
+					</p></li></ul></div><p>
+		</p><p>
+			All the other operations, including flushing, expiration
+			control, and each operation of every datatype is supported in the
+			same way Jedis support it. Note that expiration management is also
+			implemented as described in Redis manual.
+		</p><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3>
+			This implementation of Redis is provided for testing purposes
+			not as a substitution of Redis. Feel free to notify any issue of this
+			implementation so can be fixed or implemented.
+		</div></div><div class="section" title="Managing lifecycle of multiple instances"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e122"></a>Managing lifecycle of multiple instances</h2></div></div></div><p>
+			Sometimes your test will require that more than one instance of
+			same
+			database server (running in different ports) was started. For
+			example
+			for testing database sharding. In
+			<a class="link" href="#advanced.multipleinstances-database" title="Example&nbsp;1.2.&nbsp;Multiple Instances of Redis.">next example</a>
+			we see how to
+			configure
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			to manage lifecycle of multiple instances.
+		</p><div class="example"><a name="advanced.multipleinstances-database"></a><p class="title"><b>Example&nbsp;1.2.&nbsp;Multiple Instances of Redis.</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> ManagedRedis managedRedis7<span class="hl-number">9</span> = newManagedRedisRule().redisPath(<strong class="hl-string"><em style="color:red">"/opt/redis-2.4.16"</em></strong>)
+								.targetPath(<strong class="hl-string"><em style="color:red">"target/redis1"</em></strong>)
+								.configurationPath(getAbsoluteFilePath(<strong class="hl-string"><em style="color:red">"src/test/resources/redis_6379.conf"</em></strong>))
+								.port(<span class="hl-number">6379</span>)
+								.build();
+
+<em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> ManagedRedis managedRedis8<span class="hl-number">0</span> = newManagedRedisRule().redisPath(<strong class="hl-string"><em style="color:red">"/opt/redis-2.4.16"</em></strong>)
+								.targetPath(<strong class="hl-string"><em style="color:red">"target/redis2"</em></strong>)
+								.configurationPath(getAbsoluteFilePath(<strong class="hl-string"><em style="color:red">"src/test/resources/redis_6380.conf"</em></strong>))
+								.port(<span class="hl-number">6380</span>)
+								.build();
+			</pre></div></div><br class="example-break"><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3>Note that target path should be set to different values for
+			each instance, if not some started processes could not be shutdown.
+		</div></div><div class="section" title="Fast Way"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e140"></a>Fast Way</h2></div></div></div><p>
+			When you instantiate a Rule for maintaining database into known state
+			(
+			<code class="classname">MongoDbRule</code>
+			,
+			<code class="classname">Neo4jRule</code>
+			, ...)
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			requires you set a configuration object with properties like host,
+			port, database name, ... but although most of the time default values
+			are enough, we still need to create the configuration object, which
+			means our code becomes harder to read.
+		</p><p>
+			We can avoid this by using an inner builder inside each rule,
+			which
+			creates for us a Rule with default parameters set. For example for
+			<code class="classname">Neo4jRule</code>
+			:
+		</p><div class="example"><a name="advanced.fastway-database"></a><p class="title"><b>Example&nbsp;1.3.&nbsp;Embedded Neo4jRule with defaults.</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.neo4j.Neo4jRule.Neo4jRuleBuilder.newNeo4jRule;
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> Neo4jRule neo4jRule = newNeo4jRule().defaultEmbeddedNeo4j();</pre></div></div><br class="example-break"><p>
+			In previous
+			<a class="link" href="#advanced.fastway-database" title="Example&nbsp;1.3.&nbsp;Embedded Neo4jRule with defaults.">example</a>
+			<code class="classname">Neo4jRule</code>
+			is configured to be used as embedded approach with default
+			parameters.
+		</p><p>
+			Another example using
+			<code class="classname">CassandraRule</code>
+			in managed way.
+		</p><div class="example"><a name="advanced.fastway-managed-database"></a><p class="title"><b>Example&nbsp;1.4.&nbsp;Managed Cassandra with defaults.</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.cassandra.CassandraRule.CassandraRuleBuilder.newCassandraRule;
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> CassandraRule cassandraRule = newCassandraRule().defaultManagedCassandra(<strong class="hl-string"><em style="color:red">"Test Cluster"</em></strong>);</pre></div></div><br class="example-break"><p>And each Rule contains their builder class to create default
+			values.
+		</p></div><div class="section" title="Simultaneous engines"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e184"></a>Simultaneous engines</h2></div></div></div><p>
+			Sometimes applications will contain more than one
+			<span class="emphasis"><em>NoSQL</em></span>
+			engine,
+			for example some parts of your model will be expressed better
+			as a
+			graph (
+			<span class="application">Neo4J</span>
+			for example), but other parts will be more natural in a
+			column way
+			(for example using
+			<span class="application">Cassandra</span>
+			).
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			supports this
+			kind of scenarios by providing in integration tests a
+			way to not load
+			all datasets into one system, but choosing which
+			datasets are stored
+			in each backend.
+		</p><p>
+			For declaring more than one engine, you must give a name to each
+			database
+			<span class="emphasis"><em>Rule</em></span>
+			using
+			<code class="function">connectionIdentifier()</code>
+			method in configuration instance.
+		</p><div class="example"><a name="advanced.name-database"></a><p class="title"><b>Example&nbsp;1.5.&nbsp;Given a name database rule</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+                                        .databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"one"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);</pre></div></div><br class="example-break"><p>
+			And also you need to provide an identified dataset for each engine,
+			by using
+			<code class="function">withSelectiveLocations</code>
+			attribute of
+			<code class="function">@UsingDataSet</code>
+			annotation. You must set up the pair "named connection" / datasets.
+		</p><div class="example"><a name="advanced.dataset-selective"></a><p class="title"><b>Example&nbsp;1.6.&nbsp;Selective dataset example</b></p><div class="example-contents"><pre class="programlisting">@UsingDataSet(withSelectiveLocations =												 
+				{ <em><span class="hl-annotation" style="color: gray">@Selective(identifier = "one", locations = "test3")</span></em> }, 
+			loadStrategy = LoadStrategyEnum.REFRESH)</pre></div></div><br class="example-break"><p>
+			In
+			<a class="link" href="#advanced.dataset-selective" title="Example&nbsp;1.6.&nbsp;Selective dataset example">example</a>
+			we are refreshing database declared on
+			<a class="link" href="#advanced.name-database" title="Example&nbsp;1.5.&nbsp;Given a name database rule">previous example</a>
+			with data located at
+			<span class="emphasis"><em>test3</em></span>
+			file.
+		</p><p>
+			Also works in expectations annotation:
+		</p><div class="example"><a name="advanced.expected-dataset-selective"></a><p class="title"><b>Example&nbsp;1.7.&nbsp;Selective expectation example</b></p><div class="example-contents"><pre class="programlisting">@ShouldMatchDataSet(withSelectiveMatcher = 
+				{ <em><span class="hl-annotation" style="color: gray">@SelectiveMatcher(identifier = "one", location = "test3")</span></em> 
+				})</pre></div></div><br class="example-break"><p>
+			When you use more than one engine at a time you should take
+			under
+			consideration next rules:
+		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+				If location attribute is set, it will use it and will ignore
+				<code class="function">withSelectiveMatcher</code>
+				attribute data. Location data is populated through all registered
+				systems.
+			</li><li class="listitem">
+				If location is not set, then system tries to insert data defined in
+				<code class="function">withSelectiveMatcher</code>
+				attribute to each backend.
+			</li><li class="listitem">
+				If
+				<code class="function">withSelectiveMatcher</code>
+				attribute is not set, then default strategy (explained in
+				<a class="link" href="#">section</a>
+				) is taken. Note that default strategy will replicate all datasets
+				to defined engines.
+			</li></ul></div><p>
+			You can also use the same approach for inserting data into same
+			engine but in different databases. If you have one
+			<span class="application">MongoDb</span>
+			instance with two databases, you can also write tests for both
+			databases at one time. For example:
+		</p><div class="example"><a name="advanced.multiple-mongodb"></a><p class="title"><b>Example&nbsp;1.8.&nbsp;Multiple connections example</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"one"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule2 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test2"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"two"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Test</span></em>
+<em><span class="hl-annotation" style="color: gray">@UsingDataSet(withSelectiveLocations = {
+		@Selective(identifier = "one", locations = "json.test"),
+		@Selective(identifier = "two", locations = "json3.test") }, 
+	loadStrategy = LoadStrategyEnum.CLEAN_INSERT)</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">void</strong> my_test() {...}
+</pre></div></div><br class="example-break"></div><div class="section" title="Support for JSR-330"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e276"></a>Support for JSR-330</h2></div></div></div><p>
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			supports two annotations of
+			<acronym class="acronym">JSR-330</acronym>
+			aka Dependency Injection for Java. Concretely
+			<code class="classname">@Inject</code>
+			and
+			<code class="classname">@Named</code>
+			annotations.
+		</p><p>
+			During test execution you may need to access underlying class used to
+			load and assert data to execute extra operations to backend.
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			will inspect
+			<code class="classname">@Inject</code>
+			annotations of test fields, and try to set own driver to attribute.
+			For example in case of
+			<span class="application">MongoDb</span>
+			,
+			<code class="classname">com.mongodb.Mongo</code>
+			instance will be injected.
+		</p><div class="example"><a name="advanced.injection"></a><p class="title"><b>Example&nbsp;1.9.&nbsp;Injection example</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+						.databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+<strong class="hl-keyword">private</strong> Mongo mongo;</pre></div></div><br class="example-break"><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>
+				Note that in
+				<a class="link" href="#advanced.injection" title="Example&nbsp;1.9.&nbsp;Injection example">example</a>
+				we are setting
+				<code class="varname">this</code>
+				as second parameter to the Rule. This is only required in versions
+				of JUnit prior to 4.11. In new versions is no longer required
+				passing the this parameter.
+			</p></div><p>
+			But if you are using more than one engine at same time (see
+			<a class="link" href="#advanced.simultaneous-engine-title">chapter</a>
+			) you need a way to distinguish each connection. For fixing this
+			problem, you must use
+			<code class="classname">@Named</code>
+			annotation by putting the identifier given in configuration instance.
+			For example:
+		</p><div class="example"><a name="advanced.named-injection"></a><p class="title"><b>Example&nbsp;1.10.&nbsp;Named injection example</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"one"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule2 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test2"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"two"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Named("one")</span></em>
+<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+<strong class="hl-keyword">private</strong> Mongo mongo1;
+	
+<em><span class="hl-annotation" style="color: gray">@Named("two")</span></em>
+<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+<strong class="hl-keyword">private</strong> Mongo mongo2;</pre></div></div><br class="example-break"></div></div></body></html>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="serif,Symbol,ZapfDingbats" font-size="10pt" text-align="justify" line-height="normal" font-selection-strategy="character-by-character" line-height-shift-adjustment="disregard-shifts" writing-mode="lr-tb" language="en"><fo:layout-master-set><fo:simple-page-master master-name="blank" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body display-align="center" margin-bottom="0.5in" margin-top="0.5in" region-name="blank-body"/><fo:region-before region-name="xsl-region-before-blank" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-blank" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:page-sequence-master master-name="titlepage"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="titlepage-first" page-position="first"/><fo:conditional-page-master-reference master-reference="titlepage-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="titlepage-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="lot"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="lot-first" page-position="first"/><fo:conditional-page-master-reference master-reference="lot-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="lot-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="front"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="front-first" page-position="first"/><fo:conditional-page-master-reference master-reference="front-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="front-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="body"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="body-first" page-position="first"/><fo:conditional-page-master-reference master-reference="body-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="body-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="back"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="back-first" page-position="first"/><fo:conditional-page-master-reference master-reference="back-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="back-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="index"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="index-first" page-position="first"/><fo:conditional-page-master-reference master-reference="index-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="index-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master></fo:layout-master-set><fo:page-sequence xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions" hyphenate="true" master-reference="body" language="en" format="1" initial-page-number="auto" force-page-count="no-force" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2"><fo:static-content flow-name="xsl-region-before-first"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-odd"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>HBase Engine</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-even"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>HBase Engine</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-blank"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-footnote-separator"><fo:block><fo:leader color="black" leader-pattern="rule" leader-length="1in"/></fo:block></fo:static-content><fo:static-content flow-name="blank-body"><fo:block text-align="center"/></fo:static-content><fo:static-content flow-name="xsl-region-after-first"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-odd"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-even"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-blank"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:flow flow-name="xsl-region-body" start-indent="4pc" end-indent="0pt"><fo:block id="hbase"><fo:block font-family="sans-serif,Symbol,ZapfDingbats"><fo:block margin-left="0pt"><fo:block font-size="24.8832pt" font-weight="bold"><fo:block keep-with-next.within-column="always" space-before.optimum="10pt" space-before.minimum="10pt * 0.8" space-before.maximum="10pt * 1.2" hyphenate="false" text-align="start" start-indent="0pt" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2">Chapter 1. HBase Engine</fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" id="toc...hbase"><fo:block><fo:block><fo:block space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="0pt" start-indent="0pt" font-size="17.28pt" font-weight="bold" font-family="sans-serif,Symbol,ZapfDingbats">Table of Contents</fo:block></fo:block></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d152e4">HBase</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d152e4"><fo:page-number-citation ref-id="d152e4"/></fo:basic-link></fo:inline></fo:block><fo:block id="toc.hbase.d152e4" margin-left="24pt"><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d152e65">Maven Setup</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d152e65"><fo:page-number-citation ref-id="d152e65"/></fo:basic-link></fo:inline></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d152e81">Dataset Format</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d152e81"><fo:page-number-citation ref-id="d152e81"/></fo:basic-link></fo:inline></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d152e105">Getting Started</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d152e105"><fo:page-number-citation ref-id="d152e105"/></fo:basic-link></fo:inline></fo:block></fo:block></fo:block><fo:block id="d152e4"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">HBase</fo:marker><fo:block font-size="20.735999999999997pt" border-top="0.5pt solid black" border-bottom="0.5pt solid black" padding-top="6pt" padding-bottom="3pt">HBase</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Apache HBase 
+			is an open-source, distributed, versioned, column-oriented store.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+			supports
+			<fo:inline font-style="italic">HBase</fo:inline>
+			by using next classes:
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d152e22"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.1. Lifecycle Management Rules</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>Embedded</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.hbase.EmbeddedHBase
+						</fo:inline>
+					</fo:block></fo:table-cell>
+				</fo:table-row><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>Managed</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.hbase.ManagedHBase
+						</fo:inline>
+					</fo:block></fo:table-cell>
+				</fo:table-row></fo:table-body></fo:table></fo:block>
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d152e50"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.2. Manager Rule</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>NoSQLUnit Management</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.hbase.HBaseRule
+						</fo:inline>
+					</fo:block></fo:table-cell>
+				</fo:table-row></fo:table-body></fo:table></fo:block>
+		</fo:block><fo:block id="d152e65"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Maven Setup</fo:marker><fo:block font-size="17.28pt">Maven Setup</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				To use
+				<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+				with
+				HBase
+				you only need to add next
+				dependency:
+			</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="conf.nosqlunit_hbase_dep"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.1. NoSqlUnit Maven Repository</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e79"><fo:inline font-weight="bold">&lt;dependency&gt;</fo:inline>
+	<fo:inline font-weight="bold">&lt;groupId&gt;</fo:inline>com.lordofthejars<fo:inline font-weight="bold">&lt;/groupId&gt;</fo:inline>
+	<fo:inline font-weight="bold">&lt;artifactId&gt;</fo:inline>nosqlunit-hbase<fo:inline font-weight="bold">&lt;/artifactId&gt;</fo:inline>
+	<fo:inline font-weight="bold">&lt;version&gt;</fo:inline>${version.nosqlunit}<fo:inline font-weight="bold">&lt;/version&gt;</fo:inline>
+<fo:inline font-weight="bold">&lt;/dependency&gt;</fo:inline></fo:block></fo:block></fo:block></fo:block><fo:block id="d152e81"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Dataset Format</fo:marker><fo:block font-size="17.28pt">Dataset Format</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				Default dataset file format in
+				<fo:inline font-style="italic">HBase</fo:inline>
+				module is json. Dataset in HBase is the same used by
+				
+					<fo:basic-link external-destination="url(https://github.com/jsevellec/cassandra-unit/)"><fo:inline>Cassandra-Unit</fo:inline></fo:basic-link><fo:inline hyphenate="false"> [<fo:basic-link external-destination="url(https://github.com/jsevellec/cassandra-unit/)">https://github.com/jsevellec/cassandra-unit/</fo:basic-link>]</fo:inline>
+				
+				but not all fields are supported. Only fields available in TSV HBase
+				application can be set into dataset.
+			</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				So as summary datasets must have next
+				<fo:basic-link internal-destination="ex.hbase_dataset"><fo:inline>
+					format
+				</fo:inline></fo:basic-link>
+				:
+			</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="ex.hbase_dataset"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.2. Example of HBase Dataset</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e103">{
+    "name" : "tablename",
+    "columnFamilies" : [{
+        "name" : "columnFamilyName",
+        "rows" : [{
+            "key" : "key1",
+            "columns" : [{
+                "name" : "columnName",
+                "value" : "columnValue"
+            },
+            ...
+            ]
+        },
+        ...
+        ]
+    },
+    ...
+    ]
+}</fo:block></fo:block></fo:block></fo:block><fo:block id="d152e105"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Getting Started</fo:marker><fo:block font-size="17.28pt">Getting Started</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block id="d152e108"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Lifecycle Management Strategy</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					First step is defining which lifecycle management strategy is
+					required for your tests. Depending on kind of test you are
+					implementing (unit test, integration test, deployment test, ...)
+					you will require an embedded approach, managed approach or remote
+					approach.
+				</fo:block><fo:block id="d152e113"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Embedded Lifecycle</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						To configure
+						<fo:inline font-weight="bold">embedded</fo:inline>
+						approach you should only instantiate next
+						<fo:basic-link internal-destination="program.hbase_embedded_conf"><fo:inline>rule</fo:inline></fo:basic-link>
+						:
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.hbase_embedded_conf"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.3. Embedded HBase</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e127"><fo:inline color="gray">@ClassRule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> EmbeddedHBase embeddedHBase = newEmbeddedHBaseRule().build();</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						By default embedded
+						<fo:inline font-style="italic">Embedded</fo:inline>
+						rule uses
+						<fo:inline font-family="monospace">HBaseTestingUtility</fo:inline>
+						default values:
+					</fo:block><fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d152e137"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.3. Default Embedded Values</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Target path
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								This is the directory where
+								<fo:inline font-style="italic">HBase</fo:inline>
+								stores data and is
+								<fo:inline font-family="monospace">target/data</fo:inline>
+								.
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Host
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								localhost
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Port
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								By default port used is 60000.
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>File Permissions</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Depending on your umask configuration,
+								<fo:inline font-family="monospace">HBaseTestingUtility</fo:inline>
+								will create some directories that will not be accessible during
+								runtime. By default this value is set to 775, but depending on
+								your OS you may require a different value.
+							</fo:block></fo:table-cell>
+						</fo:table-row></fo:table-body></fo:table></fo:block></fo:block><fo:block id="d152e181"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Managed Lifecycle</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						To configure
+						<fo:inline font-weight="bold">managed</fo:inline>
+						approach you should only instantiate next
+						<fo:basic-link internal-destination="program.hbase_managed_conf"><fo:inline>rule</fo:inline></fo:basic-link>
+						:
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.hbase_managed_conf"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.4. Managed HBase</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e195"><fo:inline color="gray">@ClassRule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> ManagedHBase managedHBase = newManagedHBaseServerRule().build();</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						By default managed
+						<fo:inline font-style="italic">HBase</fo:inline>
+						rule uses next
+						default values but can be configured
+						programmatically:
+					</fo:block><fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d152e202"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.4. Default Managed Values</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Target path
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								This is the directory where
+								<fo:inline font-style="italic">HBase</fo:inline>
+								server is started and is
+								<fo:inline font-family="monospace">target/hbase-temp</fo:inline>
+								.
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								CassandraPath
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								<fo:inline font-style="italic">HBase</fo:inline>
+								installation directory which by default is
+								retrieved from
+								<fo:inline font-family="monospace">HBASE_HOME</fo:inline>
+								system environment
+								variable.
+							</fo:block></fo:table-cell>
+						</fo:table-row><fo:table-row>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								Port
+							</fo:block></fo:table-cell>
+							<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border-start-style="none" border-end-style="none" border-top-style="none" border-bottom-style="none"><fo:block>
+								By default port used is 60000. If port is changed in
+								<fo:inline font-style="italic">HBase</fo:inline>
+								configuration file, this port should be configured too here.
+							</fo:block></fo:table-cell>
+						</fo:table-row></fo:table-body></fo:table></fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" margin-left="0.25in" margin-right="0.25in" id="d152e244"><fo:block font-size="14pt" font-weight="bold" hyphenate="false" keep-with-next.within-column="always">Warning</fo:block><fo:block>
+						To start
+						<fo:inline font-style="italic">HBASE</fo:inline><fo:inline font-family="monospace">JAVA_HOME</fo:inline>
+						must be set. Normally this variable is already configured, so you
+						would need to do nothing.
+					</fo:block></fo:block></fo:block><fo:block id="d152e251"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Remote Lifecycle</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Configuring
+						<fo:inline font-weight="bold">remote</fo:inline>
+						approach
+						does not require any special rule because you (or System
+						like
+						Maven
+						) is the responsible of starting and
+						stopping the server. This mode
+						is used in deployment tests where you
+						are testing your application
+						on real environment.
+					</fo:block></fo:block></fo:block><fo:block id="d152e262"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Configuring HBase Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					Next step is configuring
+					<fo:inline font-weight="bold">HBase</fo:inline>
+					rule in charge of maintaining
+					<fo:inline font-style="italic">HBase</fo:inline>
+					columns into known state by inserting and deleting defined
+					datasets.
+					You must register
+					<fo:inline font-family="monospace">HBaseRule</fo:inline>
+					<fo:inline font-style="italic">JUnit</fo:inline>
+					rule class, which
+					requires a configuration parameter with
+					some
+					information.
+				</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">To make developer's life easier and code more readable, a
+					fluent
+					interface can be used to create these configuration objects.
+					Three
+					different kind of configuration builders exist.
+				</fo:block><fo:block id="d152e281"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Embedded Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						The first one is for configuring a connection to embedded
+						<fo:inline font-style="italic">HBase</fo:inline>
+						.
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.embedded_connection_hbase_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.5. HBase with embedded configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e292"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.hbase.EmbeddedHBase.EmbeddedHBaseRuleBuilder.newEmbeddedHBaseRule;
+
+<fo:inline color="gray">@Rule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> HBaseRule hBaseRule = newHBaseRule().defaultEmbeddedHBase();</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Embedded HBase does not require any special parameter.
+						Configuration object is copied from Embedded rule directly to
+						HBaseRule.
+					</fo:block></fo:block><fo:block id="d152e296"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Managed Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						This is for configuring a connection to managed
+						<fo:inline font-style="italic">HBase</fo:inline>
+						.
+					</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.managed_connection_hbase_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.6. HBase with managed configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e307"><fo:inline font-weight="bold">import</fo:inline> <fo:inline font-weight="bold">static</fo:inline> com.lordofthejars.nosqlunit.hbase.ManagedHBaseConfigurationBuilder.newManagedHBaseConfiguration;
+
+<fo:inline color="gray">@Rule</fo:inline>
+<fo:inline font-weight="bold">public</fo:inline> HBaseRule hbaseRule = <fo:inline font-weight="bold">new</fo:inline> HBaseRule(newManagedHBaseConfiguration().build());</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						By default configuration used is the one loaded by calling
+						HBaseConfiguration.create() method.
+						<fo:basic-link external-destination="url(http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/HBaseConfiguration.html#create())"><fo:inline>HBaseConfiguration.create()</fo:inline></fo:basic-link><fo:inline hyphenate="false"> [<fo:basic-link external-destination="url(http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/HBaseConfiguration.html#create())">http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/HBaseConfiguration.html#create()</fo:basic-link>]</fo:inline>
+						which uses hbase-site.xml and hbase-default.xml classpath files.
+					</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						But also a method
+						<fo:inline font-family="monospace">setProperty</fo:inline>
+						method is provided to modify any parameter of generated
+						configuration object.
+					</fo:block></fo:block><fo:block id="d152e319"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="12pt">Remote Connection</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Configuring a connection to remote
+						<fo:inline font-style="italic">HBase</fo:inline>
+						uses same approach like ManagedHBase configuration object but
+						using
+						<fo:inline font-family="monospace">com.lordofthejars.nosqlunit.hbase.RemoteHBaseConfigurationBuilder
+						</fo:inline>
+						class instead of
+						com.lordofthejars.nosqlunit.hbase.ManagedHBaseConfigurationBuilder.
+						.
+					</fo:block></fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" margin-left="0.25in" margin-right="0.25in" id="d152e330"><fo:block font-size="14pt" font-weight="bold" hyphenate="false" keep-with-next.within-column="always">Warning</fo:block><fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Working with Apache HBase required a bit of knowledge about
+						how it works. For example your /etc/hosts file cannot contain a
+						reference to your host name with ip 127.0.1.1.
+					</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+						Moreover
+						<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+						uses
+						<fo:inline font-style="italic">HBase-0.94.1</fo:inline>
+						and this version should be also installed in your computer to work
+						with managed or remote approach. If you install another version, you should
+						exclude these artifacts from
+						<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+						dependencies, and add the new ones manually to your pom file.
+					</fo:block></fo:block></fo:block></fo:block><fo:block id="d152e344"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Verifying Data</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					<fo:inline font-family="monospace">@ShouldMatchDataSet</fo:inline>
+					is also supported for
+					<fo:inline font-style="italic">HBase</fo:inline>
+					data but we should keep in mind some considerations.
+				</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					If you plan to verify data with
+					<fo:inline font-family="monospace">@ShouldMatchDataSet</fo:inline>
+					in Managed and Remote approach, you should enable Aggregate
+					coprocessor by editing hbase-site-xml file and adding next lines:
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.coprocessor_hbase_parameters"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.7. HBase with coprocessor</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e363"><fo:inline font-weight="bold">&lt;property&gt;</fo:inline>
+    <fo:inline font-weight="bold">&lt;name&gt;</fo:inline>hbase.coprocessor.user.region.classes<fo:inline font-weight="bold">&lt;/name&gt;</fo:inline>
+    <fo:inline font-weight="bold">&lt;value&gt;</fo:inline>org.apache.hadoop.hbase.coprocessor.AggregateImplementation<fo:inline font-weight="bold">&lt;/value&gt;</fo:inline>
+<fo:inline font-weight="bold">&lt;/property&gt;</fo:inline></fo:block></fo:block></fo:block></fo:block><fo:block id="d152e365"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:block font-size="14.399999999999999pt">Full Example</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					To show how to use
+					<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+					with
+					<fo:inline font-style="italic">HBase</fo:inline>
+					,
+					we are going to create a
+					very simple application.
+				</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					<fo:basic-link internal-destination="program.person_hbase_manager"><fo:inline>PersonManager</fo:inline></fo:basic-link>
+					is the business class responsible of getting and updating person's
+					car.
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.person_hbase_manager"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.8. PersonCar cassandra with manager.</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e384"><fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">class</fo:inline> PersonManager {
+
+	<fo:inline font-weight="bold">private</fo:inline> Configuration configuration;
+	
+	<fo:inline font-weight="bold">public</fo:inline> PersonManager(Configuration configuration) {
+		<fo:inline font-weight="bold">this</fo:inline>.configuration = configuration;		
+	}
+	
+	<fo:inline font-weight="bold">public</fo:inline> String getCarByPersonName(String personName) <fo:inline font-weight="bold">throws</fo:inline> IOException {
+		HTable table = <fo:inline font-weight="bold">new</fo:inline> HTable(configuration, <fo:inline font-weight="bold" font-style="italic">"person"</fo:inline>);
+		Get get = <fo:inline font-weight="bold">new</fo:inline> Get(<fo:inline font-weight="bold" font-style="italic">"john"</fo:inline>.getBytes());
+		Result result = table.get(get);
+		
+		<fo:inline font-weight="bold">return</fo:inline> <fo:inline font-weight="bold">new</fo:inline> String(result.getValue(toByteArray().convert(<fo:inline font-weight="bold" font-style="italic">"personFamilyName"</fo:inline>), toByteArray().convert(<fo:inline font-weight="bold" font-style="italic">"car"</fo:inline>)));
+	}
+	
+	<fo:inline font-weight="bold">private</fo:inline> Converter&lt;String, <fo:inline font-weight="bold">byte</fo:inline>[]&gt; toByteArray() {
+		<fo:inline font-weight="bold">return</fo:inline> <fo:inline font-weight="bold">new</fo:inline> Converter&lt;String, <fo:inline font-weight="bold">byte</fo:inline>[]&gt;() {
+
+			<fo:inline color="gray">@Override</fo:inline>
+			<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">byte</fo:inline>[] convert(String element) {
+				<fo:inline font-weight="bold">return</fo:inline> element.getBytes();
+			}
+		};
+	}
+	
+}</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					And now one unit test is written:
+				</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					For
+					<fo:basic-link internal-destination="program.person_hbase_unit"><fo:inline>unit</fo:inline></fo:basic-link>
+					test we are going to use embedded approach:
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.person_hbase_unit"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.9. HBase with embedded configuration</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e396"><fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">class</fo:inline> WhenPersonWantsToKnowItsCar {
+
+	<fo:inline color="gray">@ClassRule</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">static</fo:inline> EmbeddedHBase embeddedHBase = newEmbeddedHBaseRule().build();
+	
+	<fo:inline color="gray">@Rule</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> HBaseRule hBaseRule = newHBaseRule().defaultEmbeddedHBase(<fo:inline font-weight="bold">this</fo:inline>);
+	
+	<fo:inline color="gray">@Inject</fo:inline>
+	<fo:inline font-weight="bold">private</fo:inline> Configuration configuration;
+	
+	
+	<fo:inline color="gray">@Test</fo:inline>
+	<fo:inline color="gray">@UsingDataSet(locations="persons.json", loadStrategy=LoadStrategyEnum.CLEAN_INSERT)</fo:inline>
+	<fo:inline font-weight="bold">public</fo:inline> <fo:inline font-weight="bold">void</fo:inline> car_should_be_returned() <fo:inline font-weight="bold">throws</fo:inline> IOException {
+
+		PersonManager personManager = <fo:inline font-weight="bold">new</fo:inline> PersonManager(configuration);
+		String car = personManager.getCarByPersonName(<fo:inline font-weight="bold" font-style="italic">"john"</fo:inline>);
+		
+		assertThat(car, is(<fo:inline font-weight="bold" font-style="italic">"toyota"</fo:inline>));		
+	}
+	
+}</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">And dataset used is:
+				</fo:block><fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="program.expected_hbase_file"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1.10. persons.json HBase file</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d152e403">{
+    "name" : "person",
+    "columnFamilies" : [{
+        "name" : "personFamilyName",
+        "rows" : [{
+            "key" : "john",
+            "columns" : [{
+                "name" : "age",
+                "value" : "22"
+            },
+            {
+                "name" : "car",
+                "value" : "toyota"
+            }]
+        },
+        {
+            "key" : "mary",
+            "columns" : [{
+                "name" : "age",
+                "value" : "33"
+            },
+            {
+                "name" : "car",
+                "value" : "ford"
+            }]
+        }]
+    }]
+}</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block></fo:flow></fo:page-sequence></fo:root>

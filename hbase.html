@@ -1,0 +1,373 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;HBase Engine</title><link rel="stylesheet" type="text/css" href="stylesheet.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter" title="Chapter&nbsp;1.&nbsp;HBase Engine"><div class="titlepage"><div><div><h2 class="title"><a name="hbase"></a>Chapter&nbsp;1.&nbsp;HBase Engine</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#d303e4">HBase</a></span></dt><dd><dl><dt><span class="section"><a href="#d303e65">Maven Setup</a></span></dt><dt><span class="section"><a href="#d303e81">Dataset Format</a></span></dt><dt><span class="section"><a href="#d303e105">Getting Started</a></span></dt></dl></dd></dl></div><div class="section" title="HBase"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d303e4"></a>HBase</h2></div></div></div><p>
+			<span class="application">Apache HBase </span>
+			is an open-source, distributed, versioned, column-oriented store.
+		</p><p>
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			supports
+			<span class="emphasis"><em>HBase</em></span>
+			by using next classes:
+		</p><p>
+			</p><table border="1" id="d303e22"><caption>Table&nbsp;1.1.&nbsp;Lifecycle Management Rules</caption><tr>
+					<td>Embedded</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.hbase.EmbeddedHBase
+						</code>
+					</td>
+				</tr><tr>
+					<td>Managed</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.hbase.ManagedHBase
+						</code>
+					</td>
+				</tr></table><p>
+		</p><p>
+			</p><table border="1" id="d303e50"><caption>Table&nbsp;1.2.&nbsp;Manager Rule</caption><tr>
+					<td>NoSQLUnit Management</td>
+
+					<td>
+						<code class="classname">com.lordofthejars.nosqlunit.hbase.HBaseRule
+						</code>
+					</td>
+				</tr></table><p>
+		</p><div class="section" title="Maven Setup"><div class="titlepage"><div><div><h3 class="title"><a name="d303e65"></a>Maven Setup</h3></div></div></div><p>
+				To use
+				<span class="bold"><strong>NoSQLUnit</strong></span>
+				with
+				<span class="application">HBase</span>
+				you only need to add next
+				dependency:
+			</p><div class="example"><a name="conf.nosqlunit_hbase_dep"></a><p class="title"><b>Example&nbsp;1.1.&nbsp;NoSqlUnit Maven Repository</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-tag" style="color: #000096">&lt;dependency&gt;</strong>
+	<strong class="hl-tag" style="color: #000096">&lt;groupId&gt;</strong>com.lordofthejars<strong class="hl-tag" style="color: #000096">&lt;/groupId&gt;</strong>
+	<strong class="hl-tag" style="color: #000096">&lt;artifactId&gt;</strong>nosqlunit-hbase<strong class="hl-tag" style="color: #000096">&lt;/artifactId&gt;</strong>
+	<strong class="hl-tag" style="color: #000096">&lt;version&gt;</strong>${version.nosqlunit}<strong class="hl-tag" style="color: #000096">&lt;/version&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/dependency&gt;</strong></pre></div></div><br class="example-break"></div><div class="section" title="Dataset Format"><div class="titlepage"><div><div><h3 class="title"><a name="d303e81"></a>Dataset Format</h3></div></div></div><p>
+				Default dataset file format in
+				<span class="emphasis"><em>HBase</em></span>
+				module is json. Dataset in HBase is the same used by
+				<span class="application">
+					<a class="link" href="https://github.com/jsevellec/cassandra-unit/" target="_top">Cassandra-Unit</a>
+				</span>
+				but not all fields are supported. Only fields available in TSV HBase
+				application can be set into dataset.
+			</p><p>
+				So as summary datasets must have next
+				<a class="link" href="#ex.hbase_dataset" title="Example&nbsp;1.2.&nbsp;Example of HBase Dataset">
+					format
+				</a>
+				:
+			</p><div class="example"><a name="ex.hbase_dataset"></a><p class="title"><b>Example&nbsp;1.2.&nbsp;Example of HBase Dataset</b></p><div class="example-contents"><pre class="programlisting">{
+    "name" : "tablename",
+    "columnFamilies" : [{
+        "name" : "columnFamilyName",
+        "rows" : [{
+            "key" : "key1",
+            "columns" : [{
+                "name" : "columnName",
+                "value" : "columnValue"
+            },
+            ...
+            ]
+        },
+        ...
+        ]
+    },
+    ...
+    ]
+}</pre></div></div><br class="example-break"></div><div class="section" title="Getting Started"><div class="titlepage"><div><div><h3 class="title"><a name="d303e105"></a>Getting Started</h3></div></div></div><div class="section" title="Lifecycle Management Strategy"><div class="titlepage"><div><div><h4 class="title"><a name="d303e108"></a>Lifecycle Management Strategy</h4></div></div></div><p>
+					First step is defining which lifecycle management strategy is
+					required for your tests. Depending on kind of test you are
+					implementing (unit test, integration test, deployment test, ...)
+					you will require an embedded approach, managed approach or remote
+					approach.
+				</p><div class="section" title="Embedded Lifecycle"><div class="titlepage"><div><div><h5 class="title"><a name="d303e113"></a>Embedded Lifecycle</h5></div></div></div><p>
+						To configure
+						<span class="bold"><strong>embedded</strong></span>
+						approach you should only instantiate next
+						<a class="link" href="#program.hbase_embedded_conf" title="Example&nbsp;1.3.&nbsp;Embedded HBase">rule</a>
+						:
+					</p><div class="example"><a name="program.hbase_embedded_conf"></a><p class="title"><b>Example&nbsp;1.3.&nbsp;Embedded HBase</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> EmbeddedHBase embeddedHBase = newEmbeddedHBaseRule().build();</pre></div></div><br class="example-break"><p>
+						By default embedded
+						<span class="emphasis"><em>Embedded</em></span>
+						rule uses
+						<code class="classname">HBaseTestingUtility</code>
+						default values:
+					</p><table id="d303e137"><caption>Table&nbsp;1.3.&nbsp;Default Embedded Values</caption><tr>
+							<td>
+								Target path
+							</td>
+							<td>
+								This is the directory where
+								<span class="emphasis"><em>HBase</em></span>
+								stores data and is
+								<code class="constant">target/data</code>
+								.
+							</td>
+						</tr><tr>
+							<td>
+								Host
+							</td>
+							<td>
+								localhost
+							</td>
+						</tr><tr>
+							<td>
+								Port
+							</td>
+							<td>
+								By default port used is 60000.
+							</td>
+						</tr><tr>
+							<td>File Permissions</td>
+							<td>
+								Depending on your umask configuration,
+								<code class="classname">HBaseTestingUtility</code>
+								will create some directories that will not be accessible during
+								runtime. By default this value is set to 775, but depending on
+								your OS you may require a different value.
+							</td>
+						</tr></table></div><div class="section" title="Managed Lifecycle"><div class="titlepage"><div><div><h5 class="title"><a name="d303e181"></a>Managed Lifecycle</h5></div></div></div><p>
+						To configure
+						<span class="bold"><strong>managed</strong></span>
+						approach you should only instantiate next
+						<a class="link" href="#program.hbase_managed_conf" title="Example&nbsp;1.4.&nbsp;Managed HBase">rule</a>
+						:
+					</p><div class="example"><a name="program.hbase_managed_conf"></a><p class="title"><b>Example&nbsp;1.4.&nbsp;Managed HBase</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> ManagedHBase managedHBase = newManagedHBaseServerRule().build();</pre></div></div><br class="example-break"><p>
+						By default managed
+						<span class="emphasis"><em>HBase</em></span>
+						rule uses next
+						default values but can be configured
+						programmatically:
+					</p><table id="d303e202"><caption>Table&nbsp;1.4.&nbsp;Default Managed Values</caption><tr>
+							<td>
+								Target path
+							</td>
+							<td>
+								This is the directory where
+								<span class="emphasis"><em>HBase</em></span>
+								server is started and is
+								<code class="constant">target/hbase-temp</code>
+								.
+							</td>
+						</tr><tr>
+							<td>
+								CassandraPath
+							</td>
+							<td>
+								<span class="emphasis"><em>HBase</em></span>
+								installation directory which by default is
+								retrieved from
+								<code class="varname">HBASE_HOME</code>
+								system environment
+								variable.
+							</td>
+						</tr><tr>
+							<td>
+								Port
+							</td>
+							<td>
+								By default port used is 60000. If port is changed in
+								<span class="emphasis"><em>HBase</em></span>
+								configuration file, this port should be configured too here.
+							</td>
+						</tr></table><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3>
+						To start
+						<span class="emphasis"><em>HBASE</em></span><code class="varname">JAVA_HOME</code>
+						must be set. Normally this variable is already configured, so you
+						would need to do nothing.
+					</div></div><div class="section" title="Remote Lifecycle"><div class="titlepage"><div><div><h5 class="title"><a name="d303e251"></a>Remote Lifecycle</h5></div></div></div><p>
+						Configuring
+						<span class="bold"><strong>remote</strong></span>
+						approach
+						does not require any special rule because you (or System
+						like
+						<span class="application">Maven</span>
+						) is the responsible of starting and
+						stopping the server. This mode
+						is used in deployment tests where you
+						are testing your application
+						on real environment.
+					</p></div></div><div class="section" title="Configuring HBase Connection"><div class="titlepage"><div><div><h4 class="title"><a name="d303e262"></a>Configuring HBase Connection</h4></div></div></div><p>
+					Next step is configuring
+					<span class="bold"><strong>HBase</strong></span>
+					rule in charge of maintaining
+					<span class="emphasis"><em>HBase</em></span>
+					columns into known state by inserting and deleting defined
+					datasets.
+					You must register
+					<code class="classname">HBaseRule</code>
+					<span class="emphasis"><em>JUnit</em></span>
+					rule class, which
+					requires a configuration parameter with
+					some
+					information.
+				</p><p>To make developer's life easier and code more readable, a
+					fluent
+					interface can be used to create these configuration objects.
+					Three
+					different kind of configuration builders exist.
+				</p><div class="section" title="Embedded Connection"><div class="titlepage"><div><div><h5 class="title"><a name="d303e281"></a>Embedded Connection</h5></div></div></div><p>
+						The first one is for configuring a connection to embedded
+						<span class="emphasis"><em>HBase</em></span>
+						.
+					</p><div class="example"><a name="program.embedded_connection_hbase_parameters"></a><p class="title"><b>Example&nbsp;1.5.&nbsp;HBase with embedded configuration</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.hbase.EmbeddedHBase.EmbeddedHBaseRuleBuilder.newEmbeddedHBaseRule;
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> HBaseRule hBaseRule = newHBaseRule().defaultEmbeddedHBase();</pre></div></div><br class="example-break"><p>
+						Embedded HBase does not require any special parameter.
+						Configuration object is copied from Embedded rule directly to
+						HBaseRule.
+					</p></div><div class="section" title="Managed Connection"><div class="titlepage"><div><div><h5 class="title"><a name="d303e296"></a>Managed Connection</h5></div></div></div><p>
+						This is for configuring a connection to managed
+						<span class="emphasis"><em>HBase</em></span>
+						.
+					</p><div class="example"><a name="program.managed_connection_hbase_parameters"></a><p class="title"><b>Example&nbsp;1.6.&nbsp;HBase with managed configuration</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">import</strong> <strong class="hl-keyword">static</strong> com.lordofthejars.nosqlunit.hbase.ManagedHBaseConfigurationBuilder.newManagedHBaseConfiguration;
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> HBaseRule hbaseRule = <strong class="hl-keyword">new</strong> HBaseRule(newManagedHBaseConfiguration().build());</pre></div></div><br class="example-break"><p>
+						By default configuration used is the one loaded by calling
+						HBaseConfiguration.create() method.
+						<a class="link" href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/HBaseConfiguration.html#create()" target="_top">HBaseConfiguration.create()</a>
+						which uses hbase-site.xml and hbase-default.xml classpath files.
+					</p><p>
+						But also a method
+						<code class="function">setProperty</code>
+						method is provided to modify any parameter of generated
+						configuration object.
+					</p></div><div class="section" title="Remote Connection"><div class="titlepage"><div><div><h5 class="title"><a name="d303e319"></a>Remote Connection</h5></div></div></div><p>
+						Configuring a connection to remote
+						<span class="emphasis"><em>HBase</em></span>
+						uses same approach like ManagedHBase configuration object but
+						using
+						<code class="classname">com.lordofthejars.nosqlunit.hbase.RemoteHBaseConfigurationBuilder
+						</code>
+						class instead of
+						com.lordofthejars.nosqlunit.hbase.ManagedHBaseConfigurationBuilder.
+						.
+					</p></div><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>
+						Working with Apache HBase required a bit of knowledge about
+						how it works. For example your /etc/hosts file cannot contain a
+						reference to your host name with ip 127.0.1.1.
+					</p><p>
+						Moreover
+						<span class="bold"><strong>NoSQLUnit</strong></span>
+						uses
+						<span class="emphasis"><em>HBase-0.94.1</em></span>
+						and this version should be also installed in your computer to work
+						with managed or remote approach. If you install another version, you should
+						exclude these artifacts from
+						<span class="bold"><strong>NoSQLUnit</strong></span>
+						dependencies, and add the new ones manually to your pom file.
+					</p></div></div><div class="section" title="Verifying Data"><div class="titlepage"><div><div><h4 class="title"><a name="d303e344"></a>Verifying Data</h4></div></div></div><p>
+					<code class="classname">@ShouldMatchDataSet</code>
+					is also supported for
+					<span class="emphasis"><em>HBase</em></span>
+					data but we should keep in mind some considerations.
+				</p><p>
+					If you plan to verify data with
+					<code class="classname">@ShouldMatchDataSet</code>
+					in Managed and Remote approach, you should enable Aggregate
+					coprocessor by editing hbase-site-xml file and adding next lines:
+				</p><div class="example"><a name="program.coprocessor_hbase_parameters"></a><p class="title"><b>Example&nbsp;1.7.&nbsp;HBase with coprocessor</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-tag" style="color: #000096">&lt;property&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;name&gt;</strong>hbase.coprocessor.user.region.classes<strong class="hl-tag" style="color: #000096">&lt;/name&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;value&gt;</strong>org.apache.hadoop.hbase.coprocessor.AggregateImplementation<strong class="hl-tag" style="color: #000096">&lt;/value&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/property&gt;</strong></pre></div></div><br class="example-break"></div><div class="section" title="Full Example"><div class="titlepage"><div><div><h4 class="title"><a name="d303e365"></a>Full Example</h4></div></div></div><p>
+					To show how to use
+					<span class="bold"><strong>NoSQLUnit</strong></span>
+					with
+					<span class="emphasis"><em>HBase</em></span>
+					,
+					we are going to create a
+					very simple application.
+				</p><p>
+					<a class="link" href="#program.person_hbase_manager" title="Example&nbsp;1.8.&nbsp;PersonCar cassandra with manager.">PersonManager</a>
+					is the business class responsible of getting and updating person's
+					car.
+				</p><div class="example"><a name="program.person_hbase_manager"></a><p class="title"><b>Example&nbsp;1.8.&nbsp;PersonCar cassandra with manager.</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">public</strong> <strong class="hl-keyword">class</strong> PersonManager {
+
+	<strong class="hl-keyword">private</strong> Configuration configuration;
+	
+	<strong class="hl-keyword">public</strong> PersonManager(Configuration configuration) {
+		<strong class="hl-keyword">this</strong>.configuration = configuration;		
+	}
+	
+	<strong class="hl-keyword">public</strong> String getCarByPersonName(String personName) <strong class="hl-keyword">throws</strong> IOException {
+		HTable table = <strong class="hl-keyword">new</strong> HTable(configuration, <strong class="hl-string"><em style="color:red">"person"</em></strong>);
+		Get get = <strong class="hl-keyword">new</strong> Get(<strong class="hl-string"><em style="color:red">"john"</em></strong>.getBytes());
+		Result result = table.get(get);
+		
+		<strong class="hl-keyword">return</strong> <strong class="hl-keyword">new</strong> String(result.getValue(toByteArray().convert(<strong class="hl-string"><em style="color:red">"personFamilyName"</em></strong>), toByteArray().convert(<strong class="hl-string"><em style="color:red">"car"</em></strong>)));
+	}
+	
+	<strong class="hl-keyword">private</strong> Converter&lt;String, <strong class="hl-keyword">byte</strong>[]&gt; toByteArray() {
+		<strong class="hl-keyword">return</strong> <strong class="hl-keyword">new</strong> Converter&lt;String, <strong class="hl-keyword">byte</strong>[]&gt;() {
+
+			<em><span class="hl-annotation" style="color: gray">@Override</span></em>
+			<strong class="hl-keyword">public</strong> <strong class="hl-keyword">byte</strong>[] convert(String element) {
+				<strong class="hl-keyword">return</strong> element.getBytes();
+			}
+		};
+	}
+	
+}</pre></div></div><br class="example-break"><p>
+					And now one unit test is written:
+				</p><p>
+					For
+					<a class="link" href="#program.person_hbase_unit" title="Example&nbsp;1.9.&nbsp;HBase with embedded configuration">unit</a>
+					test we are going to use embedded approach:
+				</p><div class="example"><a name="program.person_hbase_unit"></a><p class="title"><b>Example&nbsp;1.9.&nbsp;HBase with embedded configuration</b></p><div class="example-contents"><pre class="programlisting"><strong class="hl-keyword">public</strong> <strong class="hl-keyword">class</strong> WhenPersonWantsToKnowItsCar {
+
+	<em><span class="hl-annotation" style="color: gray">@ClassRule</span></em>
+	<strong class="hl-keyword">public</strong> <strong class="hl-keyword">static</strong> EmbeddedHBase embeddedHBase = newEmbeddedHBaseRule().build();
+	
+	<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+	<strong class="hl-keyword">public</strong> HBaseRule hBaseRule = newHBaseRule().defaultEmbeddedHBase(<strong class="hl-keyword">this</strong>);
+	
+	<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+	<strong class="hl-keyword">private</strong> Configuration configuration;
+	
+	
+	<em><span class="hl-annotation" style="color: gray">@Test</span></em>
+	<em><span class="hl-annotation" style="color: gray">@UsingDataSet(locations="persons.json", loadStrategy=LoadStrategyEnum.CLEAN_INSERT)</span></em>
+	<strong class="hl-keyword">public</strong> <strong class="hl-keyword">void</strong> car_should_be_returned() <strong class="hl-keyword">throws</strong> IOException {
+
+		PersonManager personManager = <strong class="hl-keyword">new</strong> PersonManager(configuration);
+		String car = personManager.getCarByPersonName(<strong class="hl-string"><em style="color:red">"john"</em></strong>);
+		
+		assertThat(car, is(<strong class="hl-string"><em style="color:red">"toyota"</em></strong>));		
+	}
+	
+}</pre></div></div><br class="example-break"><p>And dataset used is:
+				</p><div class="example"><a name="program.expected_hbase_file"></a><p class="title"><b>Example&nbsp;1.10.&nbsp;persons.json HBase file</b></p><div class="example-contents"><pre class="programlisting">{
+    "name" : "person",
+    "columnFamilies" : [{
+        "name" : "personFamilyName",
+        "rows" : [{
+            "key" : "john",
+            "columns" : [{
+                "name" : "age",
+                "value" : "22"
+            },
+            {
+                "name" : "car",
+                "value" : "toyota"
+            }]
+        },
+        {
+            "key" : "mary",
+            "columns" : [{
+                "name" : "age",
+                "value" : "33"
+            },
+            {
+                "name" : "car",
+                "value" : "ford"
+            }]
+        }]
+    }]
+}</pre></div></div><br class="example-break"></div></div></div></div></body></html>
